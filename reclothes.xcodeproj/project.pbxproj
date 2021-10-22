@@ -12,12 +12,17 @@
 		60DC74B12704CD95004AD74B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74AF2704CD95004AD74B /* Main.storyboard */; };
 		60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B22704CD96004AD74B /* Assets.xcassets */; };
 		60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */; };
-		7B7C7D88270F501600C875D7 /* BerkshireSwash-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B7C7D87270F501600C875D7 /* BerkshireSwash-Regular.ttf */; };
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
 		7BF4749D2707273A00B863CF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF4749C2707273A00B863CF /* UserModel.swift */; };
 		7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */; };
-		7BF6B7982722BB470006D521 /* reclothes_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7972722BB470006D521 /* reclothes_logo.jpeg */; };
 		B75E7718FFC8C44899E52F55 /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
+		BF7022362722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF7022352722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf */; };
+		BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */; };
+		BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022452722E66A00EAA2C4 /* MainViewController.swift */; };
+		BF7022492722E72A00EAA2C4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */; };
+		BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */; };
+		BF70224D2722E81500EAA2C4 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */; };
+		BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */; };
 		D3A9AFCEE936BE6531ABAD12 /* Pods_reclothes_reclothesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */; };
 		FB7C9947BA45CBB94912AAB9 /* Pods_reclothesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */; };
 /* End PBXBuildFile section */
@@ -51,14 +56,19 @@
 		60DC74B72704CD96004AD74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60DC74BC2704CD96004AD74B /* reclothesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DC74C72704CD96004AD74B /* reclothesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B7C7D87270F501600C875D7 /* BerkshireSwash-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "BerkshireSwash-Regular.ttf"; path = "../../../Downloads/Berkshire_Swash/BerkshireSwash-Regular.ttf"; sourceTree = "<group>"; };
 		7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7BF4749C2707273A00B863CF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_signup_medium_narrow.png; sourceTree = "<group>"; };
-		7BF6B7972722BB470006D521 /* reclothes_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = reclothes_logo.jpeg; path = ../../../Desktop/reclothes_logo.jpeg; sourceTree = "<group>"; };
 		A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44F74ED8A1C4481D16DEC91 /* Pods-reclothesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothesTests.debug.xcconfig"; path = "Target Support Files/Pods-reclothesTests/Pods-reclothesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBFC089B0C408989FF016344 /* Pods-reclothesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothesTests.release.xcconfig"; path = "Target Support Files/Pods-reclothesTests/Pods-reclothesTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF7022352722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BerkshireSwash-Regular.ttf"; sourceTree = "<group>"; };
+		BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reclothes_logo.jpeg; sourceTree = "<group>"; };
+		BF7022452722E66A00EAA2C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
+		BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		E7BA1E2B872D2B17042EF754 /* Pods-reclothes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothes.release.xcconfig"; path = "Target Support Files/Pods-reclothes/Pods-reclothes.release.xcconfig"; sourceTree = "<group>"; };
 		EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothes_reclothesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,11 +138,17 @@
 		60DC74A82704CD95004AD74B /* reclothes */ = {
 			isa = PBXGroup;
 			children = (
+				BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */,
+				BF7022352722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf */,
 				7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */,
-				7B7C7D87270F501600C875D7 /* BerkshireSwash-Regular.ttf */,
 				60DC74A92704CD95004AD74B /* AppDelegate.swift */,
+				BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */,
+				BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */,
 				60DC74AD2704CD95004AD74B /* LoginViewController.swift */,
 				60DC74AF2704CD95004AD74B /* Main.storyboard */,
+				BF7022452722E66A00EAA2C4 /* MainViewController.swift */,
+				BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */,
+				BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */,
 				60DC74B22704CD96004AD74B /* Assets.xcassets */,
 				60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */,
 				60DC74B72704CD96004AD74B /* Info.plist */,
@@ -144,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */,
-				7BF6B7972722BB470006D521 /* reclothes_logo.jpeg */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -279,11 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */,
+				BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */,
 				60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */,
 				60DC74B12704CD95004AD74B /* Main.storyboard in Resources */,
-				7BF6B7982722BB470006D521 /* reclothes_logo.jpeg in Resources */,
 				7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */,
-				7B7C7D88270F501600C875D7 /* BerkshireSwash-Regular.ttf in Resources */,
+				BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */,
+				BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */,
+				BF7022362722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +432,9 @@
 				60DC74AA2704CD95004AD74B /* AppDelegate.swift in Sources */,
 				7BF4749D2707273A00B863CF /* UserModel.swift in Sources */,
 				7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */,
+				BF7022492722E72A00EAA2C4 /* MainTableViewCell.swift in Sources */,
+				BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */,
+				BF70224D2722E81500EAA2C4 /* ItemCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
