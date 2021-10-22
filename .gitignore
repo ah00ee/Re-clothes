@@ -1,0 +1,8 @@
+# xcode
+build/
+
+# cocoaPods
+pods/
+
+# etc
+.DS_Store

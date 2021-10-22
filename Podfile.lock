@@ -1,0 +1,76 @@
+PODS:
+  - Alamofire (5.4.4)
+  - KakaoSDK (2.8.0):
+    - KakaoSDKAuth (= 2.8.0)
+    - KakaoSDKCommon (= 2.8.0)
+    - KakaoSDKLink (= 2.8.0)
+    - KakaoSDKNavi (= 2.8.0)
+    - KakaoSDKStory (= 2.8.0)
+    - KakaoSDKTalk (= 2.8.0)
+    - KakaoSDKTemplate (= 2.8.0)
+    - KakaoSDKUser (= 2.8.0)
+  - KakaoSDKAuth (2.8.0):
+    - KakaoSDKCommon (= 2.8.0)
+  - KakaoSDKCommon (2.8.0):
+    - KakaoSDKCommon/Common (= 2.8.0)
+    - KakaoSDKCommon/Network (= 2.8.0)
+  - KakaoSDKCommon/Common (2.8.0)
+  - KakaoSDKCommon/Network (2.8.0):
+    - Alamofire (~> 5.1)
+    - KakaoSDKCommon/Common (= 2.8.0)
+  - KakaoSDKLink (2.8.0):
+    - KakaoSDKCommon (= 2.8.0)
+    - KakaoSDKTemplate (= 2.8.0)
+  - KakaoSDKNavi (2.8.0):
+    - KakaoSDKCommon/Common (= 2.8.0)
+  - KakaoSDKStory (2.8.0):
+    - KakaoSDKUser (= 2.8.0)
+  - KakaoSDKTalk (2.8.0):
+    - KakaoSDKTemplate (= 2.8.0)
+    - KakaoSDKUser (= 2.8.0)
+  - KakaoSDKTemplate (2.8.0):
+    - KakaoSDKCommon/Common (= 2.8.0)
+  - KakaoSDKUser (2.8.0):
+    - KakaoSDKAuth (= 2.8.0)
+  - Realm (10.16.0):
+    - Realm/Headers (= 10.16.0)
+  - Realm/Headers (10.16.0)
+  - RealmSwift (10.16.0):
+    - Realm (= 10.16.0)
+
+DEPENDENCIES:
+  - KakaoSDK
+  - RealmSwift (~> 10)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KakaoSDK
+    - KakaoSDKAuth
+    - KakaoSDKCommon
+    - KakaoSDKLink
+    - KakaoSDKNavi
+    - KakaoSDKStory
+    - KakaoSDKTalk
+    - KakaoSDKTemplate
+    - KakaoSDKUser
+    - Realm
+    - RealmSwift
+
+SPEC CHECKSUMS:
+  Alamofire: f3b09a368f1582ab751b3fff5460276e0d2cf5c9
+  KakaoSDK: 31885e28f795ea568ff3537e5ee2cb44a9906dd0
+  KakaoSDKAuth: 614d5c1b2c52f0e25436765c52bfb27b522bf116
+  KakaoSDKCommon: 54ab936e6fc31ddaa78b056a6796db0d4be33923
+  KakaoSDKLink: 944f21e87962f83f6b687c99dc2c8edd8f6e902e
+  KakaoSDKNavi: b9723872afc731063bb72b604c2f28e838ba07d4
+  KakaoSDKStory: 4d866b5988c06397b023930b61f1ca3a105f3eab
+  KakaoSDKTalk: 46327e18da9fdcc558688f11eb6be1ae4118ea21
+  KakaoSDKTemplate: 4d118c0f051de0031ba294b8be275ef08944b69b
+  KakaoSDKUser: 24a737aa1e17b75579cb9e392062811d19d40045
+  Realm: b6027801398f3743fc222f096faa85281b506e6c
+  RealmSwift: b02a3d0e4947955da960b642c98ad3a461fc4e70
+
+PODFILE CHECKSUM: cd1c4be3ee71af192558f73b00e2334b4622c950
+
+COCOAPODS: 1.11.2
