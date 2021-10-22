@@ -23,6 +23,7 @@
 		BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */; };
 		BF70224D2722E81500EAA2C4 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */; };
 		BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */; };
+		BF7022502722F1C900EAA2C4 /* reclothes_logo_without_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */; };
 		D3A9AFCEE936BE6531ABAD12 /* Pods_reclothes_reclothesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */; };
 		FB7C9947BA45CBB94912AAB9 /* Pods_reclothesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */; };
 /* End PBXBuildFile section */
@@ -69,6 +70,7 @@
 		BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
 		BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reclothes_logo_without_background.png; sourceTree = "<group>"; };
 		E7BA1E2B872D2B17042EF754 /* Pods-reclothes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothes.release.xcconfig"; path = "Target Support Files/Pods-reclothes/Pods-reclothes.release.xcconfig"; sourceTree = "<group>"; };
 		EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothes_reclothesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +140,7 @@
 		60DC74A82704CD95004AD74B /* reclothes */ = {
 			isa = PBXGroup;
 			children = (
+				BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */,
 				BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */,
 				BF7022352722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf */,
 				7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */,
@@ -296,6 +299,7 @@
 				60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */,
 				BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */,
 				60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */,
+				BF7022502722F1C900EAA2C4 /* reclothes_logo_without_background.png in Resources */,
 				60DC74B12704CD95004AD74B /* Main.storyboard in Resources */,
 				7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */,
 				BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */,
