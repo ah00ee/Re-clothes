@@ -13,17 +13,18 @@ import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
+    var window: UIWindow?
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-            if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                return AuthController.handleOpenUrl(url: url)
-            }
-
-            return false
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.handleOpenUrl(url: url)
         }
+            return false
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         KakaoSDKCommon.initSDK(appKey: "dd2acc2bd8a88e3ba2ac5a16bee1fa46")
+        sleep(1)
         
         // Realm Migration
         
@@ -32,7 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 oldObject, newObject in  newObject!["gender"] = String()
             }}})
         Realm.Configuration.defaultConfiguration = config
-        
         
         return true
     }

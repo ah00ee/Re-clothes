@@ -13,10 +13,9 @@
 		60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B22704CD96004AD74B /* Assets.xcassets */; };
 		60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */; };
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
+		7B9F5C42272B123300E876BA /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
 		7BF4749D2707273A00B863CF /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BF4749C2707273A00B863CF /* UserModel.swift */; };
 		7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */; };
-		B75E7718FFC8C44899E52F55 /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
-		BF7022362722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF7022352722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf */; };
 		BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */; };
 		BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022452722E66A00EAA2C4 /* MainViewController.swift */; };
 		BF7022492722E72A00EAA2C4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */; };
@@ -57,14 +56,14 @@
 		60DC74B72704CD96004AD74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60DC74BC2704CD96004AD74B /* reclothesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DC74C72704CD96004AD74B /* reclothesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B410E7427257F6700FE77D4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7BF4749C2707273A00B863CF /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_signup_medium_narrow.png; sourceTree = "<group>"; };
 		A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44F74ED8A1C4481D16DEC91 /* Pods-reclothesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothesTests.debug.xcconfig"; path = "Target Support Files/Pods-reclothesTests/Pods-reclothesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBFC089B0C408989FF016344 /* Pods-reclothesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothesTests.release.xcconfig"; path = "Target Support Files/Pods-reclothesTests/Pods-reclothesTests.release.xcconfig"; sourceTree = "<group>"; };
-		BF7022352722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BerkshireSwash-Regular.ttf"; sourceTree = "<group>"; };
-		BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = reclothes_logo.jpeg; sourceTree = "<group>"; };
+		BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = reclothes_logo.jpeg; path = ../reclothes/reclothes_logo.jpeg; sourceTree = "<group>"; };
 		BF7022452722E66A00EAA2C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
 		BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
@@ -82,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B75E7718FFC8C44899E52F55 /* Pods_reclothes.framework in Frameworks */,
+				7B9F5C42272B123300E876BA /* Pods_reclothes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +107,7 @@
 		2C8ADDC91EF03E161CFDF08F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7B410E7427257F6700FE77D4 /* libsqlite3.tbd */,
 				F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */,
 				EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */,
 				A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */,
@@ -140,9 +140,6 @@
 		60DC74A82704CD95004AD74B /* reclothes */ = {
 			isa = PBXGroup;
 			children = (
-				BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */,
-				BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */,
-				BF7022352722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf */,
 				7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */,
 				60DC74A92704CD95004AD74B /* AppDelegate.swift */,
 				BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */,
@@ -163,6 +160,8 @@
 			isa = PBXGroup;
 			children = (
 				7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */,
+				BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */,
+				BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */,
 			);
 			path = image;
 			sourceTree = "<group>";
@@ -304,7 +303,6 @@
 				7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */,
 				BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */,
 				BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */,
-				BF7022362722D9F900EAA2C4 /* BerkshireSwash-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +325,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		113DA988B98EBE31D46AB157 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 12;
 			files = (
 			);
 			inputFileListPaths = (
@@ -383,7 +381,7 @@
 		};
 		C7A4B95A275559DF7A637446 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
@@ -398,7 +396,7 @@
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-reclothes-checkManifestLockResult.txt",
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
@@ -613,6 +611,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8G29H6D47T;
 				INFOPLIST_FILE = reclothes/Info.plist;
@@ -622,8 +621,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swe.reclothes.reclothes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -633,6 +633,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8G29H6D47T;
 				INFOPLIST_FILE = reclothes/Info.plist;
@@ -642,8 +643,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.swe.reclothes.reclothes;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

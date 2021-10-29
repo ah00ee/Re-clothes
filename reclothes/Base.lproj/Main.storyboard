@@ -1,19 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="BerkshireSwash-Regular.ttf">
-            <string>BerkshireSwash-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--LoginViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -23,47 +17,40 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Re-clothes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Ct-60-pg7">
-                                <rect key="frame" x="114" y="239" width="186.5" height="51"/>
-                                <fontDescription key="fontDescription" name="BerkshireSwash-Regular" family="Berkshire Swash" pointSize="41"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="안녕하세요               Re-clothes입니다." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5wZ-Bc-Rqw">
+                                <rect key="frame" x="20" y="133" width="213" height="99"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="reclothes_logo.jpeg" translatesAutoresizingMaskIntoConstraints="NO" id="rzS-35-xhC">
-                                <rect key="frame" x="79" y="320" width="256" height="256"/>
-                                <rect key="contentStretch" x="0.0" y="0.0" width="0.0" height="0.0"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="256" id="9aV-h9-nVd"/>
-                                    <constraint firstAttribute="height" constant="256" id="Mvp-qK-sRh"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uSD-vB-RDZ">
-                                <rect key="frame" x="115.5" y="606" width="183" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="로그인" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Rd-Np-Zhd">
+                                <rect key="frame" x="177" y="44" width="58" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQE-ff-6j4">
+                                <rect key="frame" x="35" y="240" width="185" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="kakao_signup_medium_narrow.png"/>
                                 <connections>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZnT-6S-a4D"/>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F9D-5Y-C7q"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="uSD-vB-RDZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="34k-SB-S3E"/>
-                            <constraint firstItem="rzS-35-xhC" firstAttribute="top" secondItem="6Ct-60-pg7" secondAttribute="bottom" constant="30" id="A0K-ja-tcy"/>
-                            <constraint firstItem="uSD-vB-RDZ" firstAttribute="top" secondItem="rzS-35-xhC" secondAttribute="bottom" constant="30" id="CKE-CV-oom"/>
-                            <constraint firstItem="rzS-35-xhC" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PDx-l1-JDo"/>
-                            <constraint firstItem="rzS-35-xhC" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Uoc-Do-BuN"/>
-                            <constraint firstItem="6Ct-60-pg7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pjC-JA-Umm"/>
-                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="appTitle" destination="6Ct-60-pg7" id="IP8-iS-UYv"/>
-                        <outlet property="reclothes_logo" destination="rzS-35-xhC" id="GY0-8j-L98"/>
+                        <outlet property="intro" destination="5wZ-Bc-Rqw" id="ix6-X4-tu0"/>
+                        <outlet property="loginLabel" destination="1Rd-Np-Zhd" id="RMd-9m-zEd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="434.78260869565219" y="18.75"/>
+            <point key="canvasLocation" x="281" y="19"/>
         </scene>
         <!--Re-clothes-->
         <scene sceneID="Bjb-XQ-zMI">
@@ -114,14 +101,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-Wb-CL9" customClass="UserPageViewController">
-                                <rect key="frame" x="297" y="717.5" width="87" height="65.5"/>
+                                <rect key="frame" x="338" y="753" width="46" height="30"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="" imagePadding="3">
-                                    <imageReference key="image" image="plus.circle" catalog="system" symbolScale="large"/>
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font" scale="large">
-                                        <fontDescription key="fontDescription" type="system" pointSize="43"/>
-                                    </preferredSymbolConfiguration>
-                                </buttonConfiguration>
                                 <connections>
                                     <segue destination="ZYb-pC-91c" kind="presentation" id="8PB-fJ-t0H"/>
                                 </connections>
@@ -189,13 +170,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="CVg-S5-fEN" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" id="ahZ-jH-a9L">
-                        <imageReference key="image" image="house" catalog="system" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color systemColor="labelColor"/>
-                                <color systemColor="secondaryLabelColor"/>
-                                <color systemColor="tertiaryLabelColor"/>
-                            </hierarchicalColors>
-                        </imageReference>
+                        <imageReference key="image" image="house" catalog="system"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="MsH-tz-yTG">
@@ -216,19 +191,8 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="kakao_signup_medium_narrow.png" width="183" height="45"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
-        <image name="plus.circle" catalog="system" width="128" height="121"/>
-        <image name="reclothes_logo.jpeg" width="1024" height="1024"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

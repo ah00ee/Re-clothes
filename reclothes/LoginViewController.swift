@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  LoginViewController.swift
 //  reclothes
 //
 //
@@ -11,8 +11,8 @@ import KakaoSDKCommon
 import RealmSwift
 
 class LoginViewController: UIViewController {
-    @IBOutlet weak var reclothes_logo: UIImageView!
-    @IBOutlet weak var appTitle: UILabel!
+    @IBOutlet weak var loginLabel: UILabel!
+    @IBOutlet weak var intro: UILabel!
     
     let userRealm = try! Realm()
     
@@ -25,13 +25,16 @@ class LoginViewController: UIViewController {
         }
         mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
         if (AuthApi.hasToken()) {
+            print("view load// has token")
             UserApi.shared.accessTokenInfo { (_, error) in
                 if let error = error {
+                    print("but error")
                     // handle server error here.
                 }
                 else {
                     //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
                     //MainViewController.swift로 이동
+                    print("available")
                     self.present(mainVC, animated: true)
                 }
             }
@@ -74,6 +77,7 @@ class LoginViewController: UIViewController {
         if (AuthApi.hasToken()) {
             UserApi.shared.accessTokenInfo { (_, error) in
                 if let error = error {
+                    print("but error")
                     // handle server error here.
                 }
                 else {
@@ -88,37 +92,36 @@ class LoginViewController: UIViewController {
         
         // 카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {
+            print("kakaotalk here")
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
                 }
                 else {
-                    // login succeed.
-
                     //do something
                     _ = oauthToken
-                    
+      
                     self.saveUserInfo()
+                    self.present(mainVC, animated: true)
                 }
             }
         }
         else{
             // no KakaoTalk here.
+            print("no kakaotalk here")
             UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
                     if let error = error {
                         print(error)
                     }
                     else {
-                        // 로그인 성공
-
-                        //do somethingn
+                        //do something
                         _ = oauthToken
                         
                         self.saveUserInfo()
+                        self.present(mainVC, animated: true)
                     }
                 }
         }
-        self.present(mainVC, animated: true)
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        //print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
 }
