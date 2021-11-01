@@ -12,12 +12,16 @@ class PostViewController: UIViewController {
     
     let imgPicker = UIImagePickerController()
     @IBOutlet weak var imgView: UIImageView!
-    
+
+    // 이미지 추가 버튼 클릭시 뜨는 팝업창(photo, camera, cancle 버튼이 나옴)
     @IBAction func addImgBtn(_ sender: Any) {
-        let actionSheet = UIAlertController(title: "사진 불러오기", message: "갤러리 또는 카메라 선택", preferredStyle: .actionSheet)
-        actionSheet.addAction(UIAlertAction(title: "갤러리", style: UIAlertAction.Style.default, handler: {(action) in self.openLibrary()}))
-        actionSheet.addAction(UIAlertAction(title: "카메라", style: UIAlertAction.Style.default, handler: {(action) in self.openCamera()}))
-        actionSheet.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: nil))
+        let actionSheet = UIAlertController(title: "Select Image", message: "Photo or Camera", preferredStyle: .actionSheet)
+        actionSheet.addAction(UIAlertAction(title: "Photo", style: UIAlertAction.Style.default, handler: {(action) in self.openLibrary()}))
+        actionSheet.addAction(UIAlertAction(title: "Camera", style: UIAlertAction.Style.default, handler: {(action) in self.openCamera()}))
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
+        actionSheet.addAction(cancelAction)
+        
         self.present(actionSheet, animated: true, completion: nil)
     }
     
@@ -26,11 +30,11 @@ class PostViewController: UIViewController {
         imgPicker.delegate = self
     }
     
-    func openLibrary(){
+    func openLibrary(){ // 사진보관함 오픈
         imgPicker.sourceType = .photoLibrary
         present(imgPicker ,animated: false, completion: nil)
     }
-    func openCamera(){
+    func openCamera(){ // 카메라 오픈
         if(UIImagePickerController.isSourceTypeAvailable(.camera)){
         imgPicker.sourceType = .camera
         present(imgPicker, animated: false, completion: nil)
@@ -43,18 +47,15 @@ class PostViewController: UIViewController {
 extension PostViewController : UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        print("hi")
-        print(info)
-        
-//        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-//        {
-//            imageView.image = image
+    // 이미지 경로를 가져와서 UIImageView에 띄우고 창 내림(dismiss)
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+      
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
+        {
+            imgView.image = image
 //            print(info)
-//
-//        }
-//        dismiss(animated: true, completion: nil)
+        }
+        dismiss(animated: true, completion: nil)
       
     }
 }
