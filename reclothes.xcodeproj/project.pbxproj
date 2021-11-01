@@ -23,6 +23,8 @@
 		BF70224D2722E81500EAA2C4 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */; };
 		BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */; };
 		BF7022502722F1C900EAA2C4 /* reclothes_logo_without_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */; };
+		BFB03F79272FD10D00C9F2D0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */; };
+		BFB03F7B272FD1E400C9F2D0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */; };
 		D3A9AFCEE936BE6531ABAD12 /* Pods_reclothes_reclothesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */; };
 		FB7C9947BA45CBB94912AAB9 /* Pods_reclothesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,6 +72,8 @@
 		BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reclothes_logo_without_background.png; sourceTree = "<group>"; };
+		BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E7BA1E2B872D2B17042EF754 /* Pods-reclothes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothes.release.xcconfig"; path = "Target Support Files/Pods-reclothes/Pods-reclothes.release.xcconfig"; sourceTree = "<group>"; };
 		EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothes_reclothesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,7 +150,9 @@
 				BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */,
 				60DC74AD2704CD95004AD74B /* LoginViewController.swift */,
 				60DC74AF2704CD95004AD74B /* Main.storyboard */,
+				BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */,
 				BF7022452722E66A00EAA2C4 /* MainViewController.swift */,
+				BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */,
 				BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */,
 				BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */,
 				60DC74B22704CD96004AD74B /* Assets.xcassets */,
@@ -430,7 +436,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFB03F7B272FD1E400C9F2D0 /* PostViewController.swift in Sources */,
 				60DC74AE2704CD95004AD74B /* LoginViewController.swift in Sources */,
+				BFB03F79272FD10D00C9F2D0 /* UserViewController.swift in Sources */,
 				60DC74AA2704CD95004AD74B /* AppDelegate.swift in Sources */,
 				7BF4749D2707273A00B863CF /* UserModel.swift in Sources */,
 				7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */,
