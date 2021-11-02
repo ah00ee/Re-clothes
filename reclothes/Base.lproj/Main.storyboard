@@ -124,7 +124,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lb-EE-bLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3513.04347826087" y="895.98214285714278"/>
+            <point key="canvasLocation" x="3345" y="895"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="N6c-n3-ZM9">
@@ -377,7 +377,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIf-Y1-lrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4427.6923076923076" y="895.73459715639808"/>
+            <point key="canvasLocation" x="4216" y="894"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="t7F-9c-5Lh">
+            <objects>
+                <viewController id="XTr-Wt-jBr" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nSo-qH-MDV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nSD-49-GHY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="fuh-bc-0wT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y04-w8-iVM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-64" y="896"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="CfU-QM-0jx">
@@ -391,6 +407,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="CVg-S5-fEN" kind="relationship" relationship="viewControllers" id="6nU-7V-xRZ"/>
+                        <segue destination="XTr-Wt-jBr" kind="relationship" relationship="viewControllers" id="UOB-gQ-oq9"/>
+                        <segue destination="CZp-hp-1Ls" kind="relationship" relationship="viewControllers" id="c6R-1d-20W"/>
+                        <segue destination="ius-Rp-oaJ" kind="relationship" relationship="viewControllers" id="vOj-15-u2G"/>
                         <segue destination="AfR-gZ-8FS" kind="relationship" relationship="viewControllers" id="iep-DZ-zKg"/>
                     </connections>
                 </tabBarController>
@@ -419,6 +438,38 @@
             </objects>
             <point key="canvasLocation" x="2603" y="19"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="cHQ-FN-6CE">
+            <objects>
+                <viewController id="CZp-hp-1Ls" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EI7-fX-yP3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Cxc-ax-arl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="square.grid.2x2.fill" catalog="system" id="v6N-N1-4xx"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvZ-2r-5Lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="796" y="896"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ATt-I4-lhj">
+            <objects>
+                <viewController id="ius-Rp-oaJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CjZ-9W-5LI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="m3j-6H-aXz"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="heart.fill" catalog="system" id="Oer-oh-Mv1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CxC-FV-bDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1638" y="896"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="8eJ-QO-uhk">
             <objects>
@@ -436,15 +487,18 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cO6-On-3Ob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2602.898550724638" y="895.98214285714278"/>
+            <point key="canvasLocation" x="2491" y="896"/>
         </scene>
     </scenes>
     <resources>
         <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>
         <image name="cart.badge.plus" catalog="system" width="128" height="106"/>
+        <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="kakao_signup_medium_narrow.png" width="183" height="45"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
