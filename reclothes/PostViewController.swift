@@ -13,6 +13,7 @@ class PostViewController: UIViewController {
     let imgPicker = UIImagePickerController()
     @IBOutlet weak var imgView: UIImageView!
 
+    @IBOutlet weak var hashtagTextView: UITextView!
     // 이미지 추가 버튼 클릭시 뜨는 팝업창(photo, camera, cancle 버튼이 나옴)
     @IBAction func addImgBtn(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Select Image", message: "Photo or Camera", preferredStyle: .actionSheet)
@@ -28,6 +29,7 @@ class PostViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imgPicker.delegate = self
+        hashtagTextView.layer.borderWidth = 0.5
     }
     
     func openLibrary(){ // 사진보관함 오픈
