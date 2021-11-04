@@ -30,6 +30,7 @@ class PostViewController: UIViewController {
         super.viewDidLoad()
         imgPicker.delegate = self
         hashtagTextView.layer.borderWidth = 0.5
+        hashtagTextView.layer.borderColor = UIColor.lightGray.cgColor
     }
     
     func openLibrary(){ // 사진보관함 오픈
