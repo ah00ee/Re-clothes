@@ -240,7 +240,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="q1n-rx-XxF">
-                                <rect key="frame" x="20.000000000000007" y="20" width="93.666666666666686" height="25"/>
+                                <rect key="frame" x="20" y="20" width="102" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="iey-IX-4P6"/>
                                 </constraints>
@@ -251,7 +251,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="  Select...">
                                             <attributes>
-                                                <font key="NSFont" size="13" name=".SFNS-Regular"/>
+                                                <font key="NSFont" metaFont="system"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
