@@ -56,7 +56,7 @@ UINavigationControllerDelegate{
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
         {
             imgView.image = image
-//            print(info)
+            print(info)
         }
         dismiss(animated: true, completion: nil)
       
