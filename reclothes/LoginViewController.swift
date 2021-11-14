@@ -8,14 +8,16 @@ import UIKit
 import KakaoSDKUser
 import KakaoSDKAuth
 import KakaoSDKCommon
-import RealmSwift
+import SQLite3
+import Foundation
 
 class LoginViewController: UIViewController {
+    
+    var db: OpaquePointer?
+    
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var intro: UILabel!
-    
-    let userRealm = try! Realm()
-    
+
     override func viewDidLoad() {
         // Do any additional setup after loading the view.
         
@@ -24,11 +26,10 @@ class LoginViewController: UIViewController {
             return
         }
         mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+    
         if (AuthApi.hasToken()) {
-            print("view load// has token")
             UserApi.shared.accessTokenInfo { (_, error) in
                 if let error = error {
-                    print("but error")
                     // handle server error here.
                 }
                 else {
@@ -41,7 +42,21 @@ class LoginViewController: UIViewController {
         }
         
         super.viewDidLoad()
+        
+        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("reclothes.db")
+        
+        //opening the database
+        if sqlite3_open(fileURL.path, &db) == SQLITE_OK {
+            print("success to open ReclothesDB.db")
+            
+            //creating table
+            if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS User (userID INTEGER PRIMARY KEY AUTOINCREMENT, nickname TEXT, email TEXT, gender INTEGER, birthday TEXT)", nil, nil, nil) != SQLITE_OK {
+                let errmsg = String(cString: sqlite3_errmsg(db)!)
+                print("error creating table: \(errmsg)")
+            }
+        }
     }
+    
     func saveUserInfo(){
         // save userinfo
         UserApi.shared.me(){ [self](user,error) in
@@ -52,16 +67,60 @@ class LoginViewController: UIViewController {
                 //do something
                 _ = user
                 
-                let userInfo = UserInfo()
-                
-                userInfo.nickname = user?.kakaoAccount?.profile?.nickname ?? ""
-                userInfo.email = user?.kakaoAccount?.email ?? ""
-                userInfo.gender = user?.kakaoAccount?.gender?.rawValue ?? Gender.Male.rawValue
-                userInfo.bday = user?.kakaoAccount?.birthday ?? ""
-                
-                try! self.userRealm.write {
-                    userRealm.add(userInfo)
+                let nickname = user?.kakaoAccount?.profile?.nickname ?? ""
+                let email = user?.kakaoAccount?.email ?? ""
+                var gender = 0
+                if user?.kakaoAccount?.gender?.rawValue == "female"{
+                    gender = 1
                 }
+                let bday = user?.kakaoAccount?.birthday ?? ""
+            
+                //creating a statement
+                var stmt: OpaquePointer?
+                
+                //the userInfo insert query
+                let insertData = "INSERT INTO User(nickname, email, gender, birthday) values(?,?,?,?)"
+                
+                //preparing the query
+                if sqlite3_prepare(db, insertData, -1, &stmt, nil) != SQLITE_OK{
+                    let errmsg = String(cString: sqlite3_errmsg(db)!)
+                    print("error preparing insert: \(errmsg)")
+                    return
+                }
+                
+                //binding the parameters
+                if sqlite3_bind_text(stmt, 1, nickname, -1, nil) != SQLITE_OK{
+                    let errmsg = String(cString: sqlite3_errmsg(db)!)
+                    print("failure binding nickname: \(errmsg)")
+                    return
+                }
+                
+                if sqlite3_bind_text(stmt, 2, email, -1, nil) != SQLITE_OK{
+                    let errmsg = String(cString: sqlite3_errmsg(db)!)
+                    print("failure binding email: \(errmsg)")
+                    return
+                }
+
+                if sqlite3_bind_int(stmt, 3, Int32(gender)) != SQLITE_OK{
+                    let errmsg = String(cString: sqlite3_errmsg(db)!)
+                    print("failure binding gender: \(errmsg)")
+                    return
+                }
+                    
+                if sqlite3_bind_text(stmt, 4, bday, -1, nil) != SQLITE_OK{
+                    let errmsg = String(cString: sqlite3_errmsg(db)!)
+                    print("failure binding birthday: \(errmsg)")
+                    return
+                }
+                
+                //executing the query to insert values
+                if sqlite3_step(stmt) != SQLITE_DONE{
+                    let errmsg = String(cString: sqlite3_errmsg(db)!)
+                    print("failure inserting hero: \(errmsg)")
+                    return
+                }
+                
+                print("INSERT SUCCEED")
             }
         }
     }
@@ -77,11 +136,10 @@ class LoginViewController: UIViewController {
         if (AuthApi.hasToken()) {
             UserApi.shared.accessTokenInfo { (_, error) in
                 if let error = error {
-                    print("but error")
                     // handle server error here.
                 }
                 else {
-                    //로그인 성공
+                    //로그인 성공s
                     //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
                     
                     //로그인 창 열지 않고** 바로 메인으로 이동
@@ -122,6 +180,5 @@ class LoginViewController: UIViewController {
                     }
                 }
         }
-        //print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
 }

@@ -5,11 +5,9 @@
 //
 
 import UIKit
-
 import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
-import RealmSwift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,14 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
         KakaoSDKCommon.initSDK(appKey: "dd2acc2bd8a88e3ba2ac5a16bee1fa46")
         sleep(1)
-        
-        // Realm Migration
-        
-        let config = Realm.Configuration(schemaVersion: 1, migrationBlock: {migration, oldSchemaVersion in if(oldSchemaVersion < 1){
-            migration.enumerateObjects(ofType: UserInfo.className()){
-                oldObject, newObject in  newObject!["gender"] = String()
-            }}})
-        Realm.Configuration.defaultConfiguration = config
         
         return true
     }
