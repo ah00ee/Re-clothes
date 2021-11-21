@@ -65,9 +65,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bat-e7-eSb">
                                 <rect key="frame" x="0.0" y="64" width="414" height="608"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2021, Re-clothes Co.,Ltd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rat-U1-Pgk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2021, Re-clothes Co.,Ltd" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysz-sP-zTZ">
-                                <rect key="frame" x="124" y="682" width="166" height="11"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysz-sP-zTZ">
+                                <rect key="frame" x="207" y="682" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -159,7 +166,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lb-EE-bLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3344.9275362318845" y="894.29347826086962"/>
+            <point key="canvasLocation" x="4252.1739130434789" y="894.29347826086962"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="N6c-n3-ZM9">
@@ -400,7 +407,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIf-Y1-lrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4215.9420289855079" y="893.47826086956525"/>
+            <point key="canvasLocation" x="5123.188405797102" y="893.47826086956525"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="t7F-9c-5Lh">
@@ -431,7 +438,7 @@
                     <connections>
                         <segue destination="CVg-S5-fEN" kind="relationship" relationship="viewControllers" id="6nU-7V-xRZ"/>
                         <segue destination="XTr-Wt-jBr" kind="relationship" relationship="viewControllers" id="UOB-gQ-oq9"/>
-                        <segue destination="CZp-hp-1Ls" kind="relationship" relationship="viewControllers" id="c6R-1d-20W"/>
+                        <segue destination="ENr-3A-bhf" kind="relationship" relationship="viewControllers" id="c6R-1d-20W"/>
                         <segue destination="ius-Rp-oaJ" kind="relationship" relationship="viewControllers" id="vOj-15-u2G"/>
                         <segue destination="AfR-gZ-8FS" kind="relationship" relationship="viewControllers" id="iep-DZ-zKg"/>
                     </connections>
@@ -461,7 +468,7 @@
             </objects>
             <point key="canvasLocation" x="2603" y="19"/>
         </scene>
-        <!--View Controller-->
+        <!--Re-clothes-->
         <scene sceneID="cHQ-FN-6CE">
             <objects>
                 <viewController id="CZp-hp-1Ls" sceneMemberID="viewController">
@@ -471,11 +478,11 @@
                         <viewLayoutGuide key="safeArea" id="Cxc-ax-arl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="square.grid.2x2.fill" catalog="system" id="v6N-N1-4xx"/>
+                    <navigationItem key="navigationItem" title="Re-clothes" id="y5i-g7-hdt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dvZ-2r-5Lv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="896"/>
+            <point key="canvasLocation" x="796" y="1664"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="ATt-I4-lhj">
@@ -491,7 +498,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CxC-FV-bDA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1638" y="896"/>
+            <point key="canvasLocation" x="2544.9275362318845" y="895.92391304347836"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8eJ-QO-uhk">
@@ -510,7 +517,26 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cO6-On-3Ob" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2491" y="896"/>
+            <point key="canvasLocation" x="3397.1014492753625" y="895.92391304347836"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IQk-sO-oLu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ENr-3A-bhf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="square.grid.2x2.fill" catalog="system" id="v6N-N1-4xx"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dku-Uc-GFK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CZp-hp-1Ls" kind="relationship" relationship="rootViewController" id="As7-8H-DVg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4vt-Nz-b1T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="795.6521739130435" y="895.92391304347836"/>
         </scene>
     </scenes>
     <resources>
