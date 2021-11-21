@@ -16,6 +16,9 @@
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
 		7B9F5C42272B123300E876BA /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
 		7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */; };
+		BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */; };
+		BF48C1D4274A27B6008E58E8 /* tmp_category_banner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF48C1D3274A27B6008E58E8 /* tmp_category_banner.jpg */; };
+		BF48C1D6274A2975008E58E8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */; };
 		BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */; };
 		BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022452722E66A00EAA2C4 /* MainViewController.swift */; };
 		BF7022492722E72A00EAA2C4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */; };
@@ -65,6 +68,9 @@
 		A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44F74ED8A1C4481D16DEC91 /* Pods-reclothesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothesTests.debug.xcconfig"; path = "Target Support Files/Pods-reclothesTests/Pods-reclothesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BBFC089B0C408989FF016344 /* Pods-reclothesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothesTests.release.xcconfig"; path = "Target Support Files/Pods-reclothesTests/Pods-reclothesTests.release.xcconfig"; sourceTree = "<group>"; };
+		BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		BF48C1D3274A27B6008E58E8 /* tmp_category_banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tmp_category_banner.jpg; sourceTree = "<group>"; };
+		BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = reclothes_logo.jpeg; path = ../reclothes/reclothes_logo.jpeg; sourceTree = "<group>"; };
 		BF7022452722E66A00EAA2C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -150,6 +156,7 @@
 				BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */,
 				60DC74AD2704CD95004AD74B /* LoginViewController.swift */,
 				60DC74AF2704CD95004AD74B /* Main.storyboard */,
+				BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */,
 				7B238FAF274815D9006A5055 /* UserTableViewCell.swift */,
 				BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */,
 				BF7022452722E66A00EAA2C4 /* MainViewController.swift */,
@@ -159,6 +166,7 @@
 				60DC74B22704CD96004AD74B /* Assets.xcassets */,
 				60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */,
 				60DC74B72704CD96004AD74B /* Info.plist */,
+				BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */,
 			);
 			path = reclothes;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 			children = (
 				7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */,
 				BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */,
+				BF48C1D3274A27B6008E58E8 /* tmp_category_banner.jpg */,
 				BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */,
 			);
 			path = image;
@@ -306,6 +315,7 @@
 				60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */,
 				BF7022502722F1C900EAA2C4 /* reclothes_logo_without_background.png in Resources */,
 				60DC74B12704CD95004AD74B /* Main.storyboard in Resources */,
+				BF48C1D4274A27B6008E58E8 /* tmp_category_banner.jpg in Resources */,
 				7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */,
 				BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */,
 				BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */,
@@ -442,8 +452,10 @@
 				BFB03F79272FD10D00C9F2D0 /* UserViewController.swift in Sources */,
 				60DC74AA2704CD95004AD74B /* AppDelegate.swift in Sources */,
 				7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */,
+				BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */,
 				BF7022492722E72A00EAA2C4 /* MainTableViewCell.swift in Sources */,
 				BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */,
+				BF48C1D6274A2975008E58E8 /* CategoryViewController.swift in Sources */,
 				BF70224D2722E81500EAA2C4 /* ItemCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
