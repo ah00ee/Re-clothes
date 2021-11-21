@@ -8,54 +8,28 @@ import UIKit
 import KakaoSDKUser
 import KakaoSDKAuth
 import KakaoSDKCommon
-import SQLite3
 import Foundation
+import FirebaseAuth
+import FirebaseDatabase
 
 class LoginViewController: UIViewController {
-    
-    var db: OpaquePointer?
-    
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var intro: UILabel!
 
     override func viewDidLoad() {
-        // Do any additional setup after loading the view.
+        super.viewDidLoad()
         
+        // Do any additional setup after loading the view.
         let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
         guard let mainVC = storyboard?.instantiateViewController(identifier: "MainViewController")else{
             return
         }
         mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-        /*
-        if (AuthApi.hasToken()) {
-            UserApi.shared.accessTokenInfo { (_, error) in
-                if let error = error {
-                    // handle server error here.
-                }
-                else {
-                    //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
-                    //MainViewController.swift로 이동
-                    print("available")
-                    self.present(mainVC, animated: true)
-                }
-            }
-        }
-        */
-        super.viewDidLoad()
-
-        let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("reclothes.db")
         
-        //opening the database
-        if sqlite3_open(fileURL.path, &db) == SQLITE_OK {
-            print("success to open ReclothesDB.db")
-            
-            //creating table
-            if sqlite3_exec(db, "CREATE TABLE IF NOT EXISTS User (userID INTEGER PRIMARY KEY AUTOINCREMENT, nickname TEXT, email TEXT, gender INTEGER, birthday TEXT)", nil, nil, nil) != SQLITE_OK {
-                let errmsg = String(cString: sqlite3_errmsg(db)!)
-                print("error creating table: \(errmsg)")
-            }
+        // auto signin
+        if Auth.auth().currentUser?.uid != nil {
+            self.present(mainVC, animated: true)
         }
-        print(fileURL)
     }
     
     func saveUserInfo(){
@@ -67,7 +41,7 @@ class LoginViewController: UIViewController {
             else{
                 //do something
                 _ = user
-                
+                /*
                 let nickname = user?.kakaoAccount?.profile?.nickname ?? ""
                 let email = user?.kakaoAccount?.email ?? ""
                 var gender = 0
@@ -75,58 +49,21 @@ class LoginViewController: UIViewController {
                     gender = 1
                 }
                 let bday = user?.kakaoAccount?.birthday ?? ""
-            
-                //creating a statement
-                var stmt: OpaquePointer?
+                */
                 
-                //the userInfo insert query
-                let insertData = "INSERT INTO User(nickname, email, gender, birthday) values(?,?,?,?)"
-                
-                //preparing the query
-                if sqlite3_prepare(db, insertData, -1, &stmt, nil) != SQLITE_OK{
-                    let errmsg = String(cString: sqlite3_errmsg(db)!)
-                    print("error preparing insert: \(errmsg)")
-                    return
+                // id: user?.kakaoAccount?.email, pw: user?.id
+                Auth.auth().createUser(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))") { fuser, error in
+                    if let error = error {
+                        print(error)
+                        print("이미 가입된 회원입니다!")
+                        Auth.auth().signIn(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))", completion: nil)
+                    } else {
+                        print("회원가입이 완료되었습니다.")
+                    }
                 }
-                
-                //binding the parameters
-                if sqlite3_bind_text(stmt, 1, nickname.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), -1, nil) != SQLITE_OK{
-                    let errmsg = String(cString: sqlite3_errmsg(db)!)
-                    print("failure binding nickname: \(errmsg)")
-                    return
-                }
-                
-                if sqlite3_bind_text(stmt, 2, email, -1, nil) != SQLITE_OK{
-                    let errmsg = String(cString: sqlite3_errmsg(db)!)
-                    print("failure binding email: \(errmsg)")
-                    return
-                }
-
-                if sqlite3_bind_int(stmt, 3, Int32(gender)) != SQLITE_OK{
-                    let errmsg = String(cString: sqlite3_errmsg(db)!)
-                    print("failure binding gender: \(errmsg)")
-                    return
-                }
-                    
-                if sqlite3_bind_text(stmt, 4, bday, -1, nil) != SQLITE_OK{
-                    let errmsg = String(cString: sqlite3_errmsg(db)!)
-                    print("failure binding birthday: \(errmsg)")
-                    return
-                }
-                
-                //executing the query to insert values
-                if sqlite3_step(stmt) != SQLITE_DONE{
-                    let errmsg = String(cString: sqlite3_errmsg(db)!)
-                    print("failure inserting hero: \(errmsg)")
-                    return
-                }
-                
-                print("INSERT SUCCEED")
-                UserDefaults.standard.set(nickname, forKey: "userName")
             }
         }
     }
-    
    
     @IBAction func loginButton(_ sender: Any) {
         let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
@@ -134,23 +71,11 @@ class LoginViewController: UIViewController {
             return
         }
         mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-        /*
-        // 토큰 있을 시
-        if (AuthApi.hasToken()) {
-            UserApi.shared.accessTokenInfo { (_, error) in
-                if let error = error {
-                    // handle server error here.
-                }
-                else {
-                    //로그인 성공
-                    //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
-                    
-                    //로그인 창 열지 않고** 바로 메인으로 이동
-                    self.present(mainVC, animated: true)
-                }
-            }
+
+        // auto signin
+        if Auth.auth().currentUser?.uid != nil {
+            self.present(mainVC, animated: true)
         }
-        */
         
         // 카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {

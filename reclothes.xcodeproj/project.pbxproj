@@ -14,6 +14,7 @@
 		60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */; };
 		7B238FB0274815D9006A5055 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B238FAF274815D9006A5055 /* UserTableViewCell.swift */; };
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
+		7B8D80D7274AA5B8006C8DFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B8D80D6274AA5B8006C8DFC /* GoogleService-Info.plist */; };
 		7B9F5C42272B123300E876BA /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
 		7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */; };
 		BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */; };
@@ -64,6 +65,8 @@
 		7B238FAF274815D9006A5055 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		7B410E7427257F6700FE77D4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7B8D80D6274AA5B8006C8DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B8D80D8274AA5C1006C8DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_signup_medium_narrow.png; sourceTree = "<group>"; };
 		A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44F74ED8A1C4481D16DEC91 /* Pods-reclothesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothesTests.debug.xcconfig"; path = "Target Support Files/Pods-reclothesTests/Pods-reclothesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +131,7 @@
 		60DC749D2704CD95004AD74B = {
 			isa = PBXGroup;
 			children = (
-				7BF4749B270726C600B863CF /* Database */,
+				7B8D80D6274AA5B8006C8DFC /* GoogleService-Info.plist */,
 				7BF4749827071B7500B863CF /* image */,
 				60DC74A82704CD95004AD74B /* reclothes */,
 				60DC74A72704CD95004AD74B /* Products */,
@@ -150,6 +153,7 @@
 		60DC74A82704CD95004AD74B /* reclothes */ = {
 			isa = PBXGroup;
 			children = (
+				7B8D80D8274AA5C1006C8DFC /* GoogleService-Info.plist */,
 				7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */,
 				60DC74A92704CD95004AD74B /* AppDelegate.swift */,
 				BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */,
@@ -182,13 +186,6 @@
 			path = image;
 			sourceTree = "<group>";
 		};
-		7BF4749B270726C600B863CF /* Database */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Database;
-			sourceTree = "<group>";
-		};
 		DEE572010EA53EDDAB59111D /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +211,7 @@
 				60DC74A32704CD95004AD74B /* Frameworks */,
 				60DC74A42704CD95004AD74B /* Resources */,
 				113DA988B98EBE31D46AB157 /* [CP] Embed Pods Frameworks */,
+				2232B210A3D43ABBC49BA743 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -252,6 +250,7 @@
 				60DC74C42704CD96004AD74B /* Frameworks */,
 				60DC74C52704CD96004AD74B /* Resources */,
 				9A7DDD40FB3C0CD7D8542B70 /* [CP] Embed Pods Frameworks */,
+				A1BAB4A77ACCADB769FA69AB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -317,6 +316,7 @@
 				60DC74B12704CD95004AD74B /* Main.storyboard in Resources */,
 				BF48C1D4274A27B6008E58E8 /* tmp_category_banner.jpg in Resources */,
 				7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */,
+				7B8D80D7274AA5B8006C8DFC /* GoogleService-Info.plist in Resources */,
 				BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */,
 				BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */,
 			);
@@ -356,6 +356,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reclothes/Pods-reclothes-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		2232B210A3D43ABBC49BA743 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reclothes/Pods-reclothes-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reclothes/Pods-reclothes-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reclothes/Pods-reclothes-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		508E428C629254D84BA735C4 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,6 +410,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reclothes-reclothesUITests/Pods-reclothes-reclothesUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A1BAB4A77ACCADB769FA69AB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reclothes-reclothesUITests/Pods-reclothes-reclothesUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-reclothes-reclothesUITests/Pods-reclothes-reclothesUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-reclothes-reclothesUITests/Pods-reclothes-reclothesUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C7A4B95A275559DF7A637446 /* [CP] Check Pods Manifest.lock */ = {

@@ -8,6 +8,10 @@ target 'reclothes' do
   pod 'KakaoSDK'
   pod 'RealmSwift', '~>10'
 
+  # Add the Firebase pod for Google Analytics
+  pod 'Firebase/Analytics'
+  pod 'FirebaseUI'
+
   # Pods for reclothes
 
   target 'reclothesTests' do
