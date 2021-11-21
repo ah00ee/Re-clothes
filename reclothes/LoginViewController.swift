@@ -26,7 +26,7 @@ class LoginViewController: UIViewController {
             return
         }
         mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-    
+        /*
         if (AuthApi.hasToken()) {
             UserApi.shared.accessTokenInfo { (_, error) in
                 if let error = error {
@@ -40,9 +40,9 @@ class LoginViewController: UIViewController {
                 }
             }
         }
-        
+        */
         super.viewDidLoad()
-        
+
         let fileURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: false).appendingPathComponent("reclothes.db")
         
         //opening the database
@@ -55,6 +55,7 @@ class LoginViewController: UIViewController {
                 print("error creating table: \(errmsg)")
             }
         }
+        print(fileURL)
     }
     
     func saveUserInfo(){
@@ -89,7 +90,7 @@ class LoginViewController: UIViewController {
                 }
                 
                 //binding the parameters
-                if sqlite3_bind_text(stmt, 1, nickname, -1, nil) != SQLITE_OK{
+                if sqlite3_bind_text(stmt, 1, nickname.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed), -1, nil) != SQLITE_OK{
                     let errmsg = String(cString: sqlite3_errmsg(db)!)
                     print("failure binding nickname: \(errmsg)")
                     return
@@ -121,17 +122,19 @@ class LoginViewController: UIViewController {
                 }
                 
                 print("INSERT SUCCEED")
+                UserDefaults.standard.set(nickname, forKey: "userName")
             }
         }
     }
     
+   
     @IBAction func loginButton(_ sender: Any) {
         let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
         guard let mainVC = storyboard?.instantiateViewController(identifier: "MainViewController")else{
             return
         }
         mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-        
+        /*
         // 토큰 있을 시
         if (AuthApi.hasToken()) {
             UserApi.shared.accessTokenInfo { (_, error) in
@@ -139,7 +142,7 @@ class LoginViewController: UIViewController {
                     // handle server error here.
                 }
                 else {
-                    //로그인 성공s
+                    //로그인 성공
                     //토큰 유효성 체크 성공(필요 시 토큰 갱신됨)
                     
                     //로그인 창 열지 않고** 바로 메인으로 이동
@@ -147,6 +150,7 @@ class LoginViewController: UIViewController {
                 }
             }
         }
+        */
         
         // 카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {
@@ -168,17 +172,17 @@ class LoginViewController: UIViewController {
             // no KakaoTalk here.
             print("no kakaotalk here")
             UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                    if let error = error {
-                        print(error)
-                    }
-                    else {
-                        //do something
-                        _ = oauthToken
-                        
-                        self.saveUserInfo()
-                        self.present(mainVC, animated: true)
-                    }
+                if let error = error {
+                    print(error)
                 }
+                else {
+                    //do something
+                    _ = oauthToken
+                    
+                    self.saveUserInfo()
+                    self.present(mainVC, animated: true)
+                }
+            }
         }
     }
 }
