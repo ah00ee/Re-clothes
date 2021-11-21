@@ -462,7 +462,7 @@
         <scene sceneID="8eJ-QO-uhk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="AfR-gZ-8FS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="b0a-Gc-pfe"/>
+                    <tabBarItem key="tabBarItem" title="" id="b0a-Gc-pfe"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Kf-lR-ddZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -485,7 +485,6 @@
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="kakao_signup_medium_narrow.png" width="183" height="45"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
         <image name="square.grid.2x2.fill" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
