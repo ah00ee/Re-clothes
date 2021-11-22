@@ -14,12 +14,17 @@
 		60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */; };
 		7B238FB0274815D9006A5055 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B238FAF274815D9006A5055 /* UserTableViewCell.swift */; };
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
-		7B8D80D7274AA5B8006C8DFC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7B8D80D6274AA5B8006C8DFC /* GoogleService-Info.plist */; };
 		7B9F5C42272B123300E876BA /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
 		7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */; };
 		BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */; };
 		BF48C1D4274A27B6008E58E8 /* tmp_category_banner.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BF48C1D3274A27B6008E58E8 /* tmp_category_banner.jpg */; };
 		BF48C1D6274A2975008E58E8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */; };
+		BF48C1E5274B610C008E58E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF48C1E4274B610C008E58E8 /* GoogleService-Info.plist */; };
+		BF48C209274B7682008E58E8 /* category03.png in Resources */ = {isa = PBXBuildFile; fileRef = BF48C204274B7681008E58E8 /* category03.png */; };
+		BF48C20A274B7682008E58E8 /* category02.png in Resources */ = {isa = PBXBuildFile; fileRef = BF48C205274B7681008E58E8 /* category02.png */; };
+		BF48C20B274B7682008E58E8 /* category05.png in Resources */ = {isa = PBXBuildFile; fileRef = BF48C206274B7681008E58E8 /* category05.png */; };
+		BF48C20C274B7682008E58E8 /* category01.png in Resources */ = {isa = PBXBuildFile; fileRef = BF48C207274B7681008E58E8 /* category01.png */; };
+		BF48C20D274B7682008E58E8 /* category04.png in Resources */ = {isa = PBXBuildFile; fileRef = BF48C208274B7681008E58E8 /* category04.png */; };
 		BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */; };
 		BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022452722E66A00EAA2C4 /* MainViewController.swift */; };
 		BF7022492722E72A00EAA2C4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */; };
@@ -65,7 +70,6 @@
 		7B238FAF274815D9006A5055 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		7B410E7427257F6700FE77D4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7B8D80D6274AA5B8006C8DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7B8D80D8274AA5C1006C8DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_signup_medium_narrow.png; sourceTree = "<group>"; };
 		A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,6 +78,12 @@
 		BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF48C1D3274A27B6008E58E8 /* tmp_category_banner.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tmp_category_banner.jpg; sourceTree = "<group>"; };
 		BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		BF48C1E4274B610C008E58E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BF48C204274B7681008E58E8 /* category03.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = category03.png; path = "../../../Downloads/제목을 입력해주세요_-6/category03.png"; sourceTree = "<group>"; };
+		BF48C205274B7681008E58E8 /* category02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = category02.png; path = "../../../Downloads/제목을 입력해주세요_-6/category02.png"; sourceTree = "<group>"; };
+		BF48C206274B7681008E58E8 /* category05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = category05.png; path = "../../../Downloads/제목을 입력해주세요_-6/category05.png"; sourceTree = "<group>"; };
+		BF48C207274B7681008E58E8 /* category01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = category01.png; path = "../../../Downloads/제목을 입력해주세요_-6/category01.png"; sourceTree = "<group>"; };
+		BF48C208274B7681008E58E8 /* category04.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = category04.png; path = "../../../Downloads/제목을 입력해주세요_-6/category04.png"; sourceTree = "<group>"; };
 		BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = reclothes_logo.jpeg; path = ../reclothes/reclothes_logo.jpeg; sourceTree = "<group>"; };
 		BF7022452722E66A00EAA2C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
@@ -131,7 +141,7 @@
 		60DC749D2704CD95004AD74B = {
 			isa = PBXGroup;
 			children = (
-				7B8D80D6274AA5B8006C8DFC /* GoogleService-Info.plist */,
+				BF48C1E4274B610C008E58E8 /* GoogleService-Info.plist */,
 				7BF4749827071B7500B863CF /* image */,
 				60DC74A82704CD95004AD74B /* reclothes */,
 				60DC74A72704CD95004AD74B /* Products */,
@@ -178,12 +188,25 @@
 		7BF4749827071B7500B863CF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				BF48C1D7274B55A3008E58E8 /* category */,
 				7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */,
 				BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */,
 				BF48C1D3274A27B6008E58E8 /* tmp_category_banner.jpg */,
 				BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		BF48C1D7274B55A3008E58E8 /* category */ = {
+			isa = PBXGroup;
+			children = (
+				BF48C207274B7681008E58E8 /* category01.png */,
+				BF48C205274B7681008E58E8 /* category02.png */,
+				BF48C204274B7681008E58E8 /* category03.png */,
+				BF48C208274B7681008E58E8 /* category04.png */,
+				BF48C206274B7681008E58E8 /* category05.png */,
+			);
+			path = category;
 			sourceTree = "<group>";
 		};
 		DEE572010EA53EDDAB59111D /* Pods */ = {
@@ -310,13 +333,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */,
+				BF48C20D274B7682008E58E8 /* category04.png in Resources */,
+				BF48C1E5274B610C008E58E8 /* GoogleService-Info.plist in Resources */,
 				BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */,
 				60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */,
 				BF7022502722F1C900EAA2C4 /* reclothes_logo_without_background.png in Resources */,
+				BF48C20B274B7682008E58E8 /* category05.png in Resources */,
 				60DC74B12704CD95004AD74B /* Main.storyboard in Resources */,
+				BF48C209274B7682008E58E8 /* category03.png in Resources */,
 				BF48C1D4274A27B6008E58E8 /* tmp_category_banner.jpg in Resources */,
 				7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */,
-				7B8D80D7274AA5B8006C8DFC /* GoogleService-Info.plist in Resources */,
+				BF48C20C274B7682008E58E8 /* category01.png in Resources */,
+				BF48C20A274B7682008E58E8 /* category02.png in Resources */,
 				BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */,
 				BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */,
 			);

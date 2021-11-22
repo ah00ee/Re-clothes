@@ -10,6 +10,7 @@ import UIKit
 class CategoryViewController: UIViewController {
 
     @IBOutlet weak var categoryCollectionView: UICollectionView!
+    var categoryImgs :[String] = ["category01.png","category02.png","category03.png", "category04.png", "category05.png"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +41,13 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6 // 임시 반환값임 데이터베이스 연동후 수정해야함
+        return categoryImgs.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = categoryCollectionView.dequeueReusableCell(withReuseIdentifier: "CategoryCollectionViewCell", for: indexPath) as! CategoryCollectionViewCell
+        
+        cell.categoryImage.image = UIImage(named: categoryImgs[indexPath.row])
         
         return cell
     }
