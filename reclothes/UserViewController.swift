@@ -5,13 +5,13 @@
 //
 
 import UIKit
+import FirebaseDatabase
+import Firebase
 
 class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var userTableView: UITableView!
     var userName: String?
-    
-    let userV = UserDefaults.standard.string(forKey: "userName")
     var tableView: [String] = []
     
     override func viewDidLoad() {
@@ -23,8 +23,8 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         // Do any additional setup after loading the view.
         
         navigationController?.navigationBar.topItem?.title = "마이클로젯"
-        
         tableView.append(UserDefaults.standard.string(forKey: "userName") ?? "데이터 불러오기 실패")
+           
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -39,7 +39,6 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         return cell
     }
-    
     
     /*
     // MARK: - Navigation
