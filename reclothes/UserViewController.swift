@@ -8,38 +8,17 @@ import UIKit
 import FirebaseDatabase
 import Firebase
 
-class UserViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-    
-    @IBOutlet weak var userTableView: UITableView!
-    var userName: String?
-    var tableView: [String] = []
-    
+class UserViewController: UIViewController{
+
+    @IBOutlet weak var userName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        userTableView.delegate = self
-        userTableView.dataSource = self
 
         // Do any additional setup after loading the view.
-        
         navigationController?.navigationBar.topItem?.title = "마이클로젯"
-        tableView.append(UserDefaults.standard.string(forKey: "userName") ?? "데이터 불러오기 실패")
-           
+        userName.text = UserDefaults.standard.string(forKey: "userName") ?? "데이터 불러오기 실패"
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = userTableView.dequeueReusableCell(withIdentifier: "UserModelCell") else{
-            fatalError("no cell")
-        }
-        cell.textLabel?.text = self.tableView[indexPath.row]
-        
-        return cell
-    }
-    
+
     /*
     // MARK: - Navigation
 
