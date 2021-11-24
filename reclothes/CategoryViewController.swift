@@ -51,6 +51,4 @@ extension CategoryViewController: UICollectionViewDelegate, UICollectionViewData
         
         return cell
     }
-    
-    
 }
