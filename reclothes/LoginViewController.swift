@@ -15,6 +15,8 @@ import FirebaseDatabase
 class LoginViewController: UIViewController {
     @IBOutlet weak var loginLabel: UILabel!
     @IBOutlet weak var intro: UILabel!
+    
+    var ref: DatabaseReference!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +30,7 @@ class LoginViewController: UIViewController {
         
         // auto signin
         if Auth.auth().currentUser?.uid != nil {
-            self.present(mainVC, animated: true)
+            self.present(mainVC, animated: true, completion: nil)
         }
     }
     
@@ -41,7 +43,7 @@ class LoginViewController: UIViewController {
             else{
                 //do something
                 _ = user
-                /*
+                
                 let nickname = user?.kakaoAccount?.profile?.nickname ?? ""
                 let email = user?.kakaoAccount?.email ?? ""
                 var gender = 0
@@ -49,16 +51,18 @@ class LoginViewController: UIViewController {
                     gender = 1
                 }
                 let bday = user?.kakaoAccount?.birthday ?? ""
-                */
                 
                 // id: user?.kakaoAccount?.email, pw: user?.id
                 Auth.auth().createUser(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))") { fuser, error in
                     if let error = error {
                         print(error)
                         print("이미 가입된 회원입니다!")
-                        Auth.auth().signIn(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))", completion: nil)
+                        Auth.auth().signIn(withEmail: email, password: "\(String(describing: user?.id))", completion: nil)
                     } else {
+                        ref = Database.database().reference().child("user")
+                        self.ref.child("\(String(describing: user?.id))").setValue(["nickname": nickname, "email": email, "gender": gender, "bday": bday])
                         print("회원가입이 완료되었습니다.")
+                        UserDefaults.standard.set(nickname, forKey: "userName")
                     }
                 }
             }
@@ -71,11 +75,6 @@ class LoginViewController: UIViewController {
             return
         }
         mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-
-        // auto signin
-        if Auth.auth().currentUser?.uid != nil {
-            self.present(mainVC, animated: true)
-        }
         
         // 카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {
@@ -89,7 +88,7 @@ class LoginViewController: UIViewController {
                     _ = oauthToken
       
                     self.saveUserInfo()
-                    self.present(mainVC, animated: true)
+                    self.present(mainVC, animated: true, completion: nil)
                 }
             }
         }
@@ -105,7 +104,7 @@ class LoginViewController: UIViewController {
                     _ = oauthToken
                     
                     self.saveUserInfo()
-                    self.present(mainVC, animated: true)
+                    self.present(mainVC, animated: true, completion: nil)
                 }
             }
         }
