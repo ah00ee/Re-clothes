@@ -232,8 +232,8 @@
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.93882673979999998" green="0.86811190839999997" blue="0.5332664251" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lSL-ae-E2g">
-                                <rect key="frame" x="99" y="573" width="285" height="32"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lSL-ae-E2g">
+                                <rect key="frame" x="91" y="573" width="293" height="32"/>
                                 <segments>
                                     <segment title="없음"/>
                                     <segment title="적당"/>
