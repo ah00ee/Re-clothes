@@ -6,14 +6,17 @@
 //
 
 import UIKit
-import SwiftUI
+import FirebaseStorage
 
 class PostViewController: UIViewController {
     
     let imgPicker = UIImagePickerController()
+    
+    let imgStorage = Storage.storage()
+    
     @IBOutlet weak var imgView: UIImageView!
-
     @IBOutlet weak var hashtagTextView: UITextView!
+    
     // 이미지 추가 버튼 클릭시 뜨는 팝업창(photo, camera, cancle 버튼이 나옴)
     @IBAction func addImgBtn(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Select Image", message: "Photo or Camera", preferredStyle: .actionSheet)
@@ -37,11 +40,31 @@ class PostViewController: UIViewController {
         imgPicker.sourceType = .photoLibrary
         present(imgPicker ,animated: false, completion: nil)
     }
+    
+    @IBAction func postBtn(_ sender: UIButton) {
+        var img = imgView.image
+        var data = Data()
+        data = img!.jpegData(compressionQuality: 0.8)!
+        
+        let filePath = "test"
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/png"
+        imgStorage.reference().child(filePath).putData(data, metadata: metaData){
+            (metaData,error) in if let error = error {
+                print(error)
+            }
+            else{
+                print("업로드 성공")
+            }
+        }
+    }
+    
     func openCamera(){ // 카메라 오픈
         if(UIImagePickerController.isSourceTypeAvailable(.camera)){
-        imgPicker.sourceType = .camera
-        present(imgPicker, animated: false, completion: nil)
-        }else{ // 시뮬레이터로 카메라 동작 불가
+            imgPicker.sourceType = .camera
+            present(imgPicker, animated: false, completion: nil)
+        }
+        else{ // 시뮬레이터로 카메라 동작 불가
             print("Camera is not available on simulator, plz check on the iPhone")
         }
     }
@@ -49,7 +72,6 @@ class PostViewController: UIViewController {
 
 extension PostViewController : UIImagePickerControllerDelegate,
 UINavigationControllerDelegate{
-    
     // 이미지 경로를 가져와서 UIImageView에 띄우고 창 내림(dismiss)
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
       

@@ -12,6 +12,7 @@
 		60DC74B12704CD95004AD74B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74AF2704CD95004AD74B /* Main.storyboard */; };
 		60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B22704CD96004AD74B /* Assets.xcassets */; };
 		60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */; };
+		7B2000D32753A4270076AC3E /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B2000D22753A4270076AC3E /* account.png */; };
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
 		7B9F5C42272B123300E876BA /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
 		7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */; };
@@ -65,6 +66,7 @@
 		60DC74B72704CD96004AD74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60DC74BC2704CD96004AD74B /* reclothesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DC74C72704CD96004AD74B /* reclothesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2000D22753A4270076AC3E /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = account.png; path = ../../../Downloads/account.png; sourceTree = "<group>"; };
 		7B410E7427257F6700FE77D4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7B8D80D8274AA5C1006C8DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -183,6 +185,7 @@
 		7BF4749827071B7500B863CF /* image */ = {
 			isa = PBXGroup;
 			children = (
+				7B2000D22753A4270076AC3E /* account.png */,
 				BF705592274DE4A000D21D88 /* categoryImgs */,
 				7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */,
 				BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */,
@@ -327,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */,
+				7B2000D32753A4270076AC3E /* account.png in Resources */,
 				BF70559A274DE4B700D21D88 /* category03.png in Resources */,
 				BF48C1E5274B610C008E58E8 /* GoogleService-Info.plist in Resources */,
 				BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */,

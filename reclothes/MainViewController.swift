@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class MainViewController: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var mainTableView: UITableView!

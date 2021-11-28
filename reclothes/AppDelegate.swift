@@ -8,7 +8,6 @@ import UIKit
 import KakaoSDKCommon
 import KakaoSDKAuth
 import KakaoSDKUser
-import Firebase
 import FirebaseCore
 
 @main

@@ -124,8 +124,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-Wb-CL9" customClass="UserPageViewController">
-                                <rect key="frame" x="322" y="694.33333333333337" width="38" height="36.666666666666629"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nU0-Cp-Esl">
+                                <rect key="frame" x="16" y="119" width="344" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-so-Jyz">
+                                        <rect key="frame" x="136" y="30" width="107" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="account.png" translatesAutoresizingMaskIntoConstraints="NO" id="DyG-6O-Svv">
+                                        <rect key="frame" x="8" y="8" width="120" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="jLq-Bi-xNS">
+                                <rect key="frame" x="16" y="367" width="358" height="364"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RDh-RE-Pbr">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Qzb-yE-0Ua">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8Pn-GL-Rh7">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QgP-Wb-CL9" customClass="UserPageViewController">
+                                <rect key="frame" x="290" y="694" width="38" height="36.666666666666629"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="29"/>
                                 <state key="normal" image="cart.badge.plus" catalog="system">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="20" scale="large" weight="bold"/>
@@ -134,29 +172,22 @@
                                     <segue destination="ZYb-pC-91c" kind="presentation" id="8PB-fJ-t0H"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-so-Jyz">
-                                <rect key="frame" x="166" y="97" width="147" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="06c-Xo-IbA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="06c-Xo-IbA" firstAttribute="bottom" secondItem="QgP-Wb-CL9" secondAttribute="bottom" constant="30" id="Ldz-Ce-jPJ"/>
-                            <constraint firstItem="06c-Xo-IbA" firstAttribute="trailing" secondItem="QgP-Wb-CL9" secondAttribute="trailing" constant="30" id="rBD-Nh-Q6x"/>
+                            <constraint firstItem="nU0-Cp-Esl" firstAttribute="height" secondItem="jLq-Bi-xNS" secondAttribute="height" multiplier="0.5" id="cxz-vM-Nhm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Re-clothes" id="wrx-38-Tng"/>
                     <connections>
+                        <outlet property="userImage" destination="DyG-6O-Svv" id="YPI-8z-kOL"/>
                         <outlet property="userName" destination="1ce-so-Jyz" id="jNo-Kn-BqI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Lb-EE-bLh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4252.1739130434789" y="894.29347826086962"/>
+            <point key="canvasLocation" x="4250.7692307692305" y="893.60189573459706"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="N6c-n3-ZM9">
@@ -183,6 +214,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="postBtn:" destination="ZYb-pC-91c" eventType="touchUpInside" id="Nyh-io-xuk"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1일 기준 셰어 가격 (원)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-Pm-mbp">
                                 <rect key="frame" x="180" y="117" width="190" height="34"/>
@@ -228,15 +262,6 @@
                                 <segments>
                                     <segment title="없음"/>
                                     <segment title="약간"/>
-                                    <segment title="있음"/>
-                                </segments>
-                                <color key="selectedSegmentTintColor" red="0.93882673979999998" green="0.86811190839999997" blue="0.5332664251" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                            </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lSL-ae-E2g">
-                                <rect key="frame" x="91" y="573" width="293" height="32"/>
-                                <segments>
-                                    <segment title="없음"/>
-                                    <segment title="적당"/>
                                     <segment title="있음"/>
                                 </segments>
                                 <color key="selectedSegmentTintColor" red="0.93882673979999998" green="0.86811190839999997" blue="0.5332664251" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -329,6 +354,15 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="lSL-ae-E2g">
+                                <rect key="frame" x="91" y="613" width="269" height="32"/>
+                                <segments>
+                                    <segment title="없음"/>
+                                    <segment title="적당"/>
+                                    <segment title="있음"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" red="0.93882673979999998" green="0.86811190839999997" blue="0.5332664251" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </segmentedControl>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="5oO-Cq-HZo"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -397,7 +431,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIf-Y1-lrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5123.188405797102" y="893.47826086956525"/>
+            <point key="canvasLocation" x="5123.0769230769229" y="892.89099526066343"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="t7F-9c-5Lh">
@@ -714,10 +748,10 @@
             </objects>
             <point key="canvasLocation" x="795.6521739130435" y="1663.858695652174"/>
         </scene>
-        <!--View Controller-->
+        <!--User View Controller-->
         <scene sceneID="ATt-I4-lhj">
             <objects>
-                <viewController id="ius-Rp-oaJ" sceneMemberID="viewController">
+                <viewController id="ius-Rp-oaJ" customClass="UserViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CjZ-9W-5LI">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -770,6 +804,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="account.png" width="64" height="64"/>
         <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>
         <image name="cart.badge.plus" catalog="system" width="128" height="106"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
