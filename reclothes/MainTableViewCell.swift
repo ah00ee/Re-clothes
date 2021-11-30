@@ -7,7 +7,7 @@
 
 import UIKit
 
-class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource {
+class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var tmpItemName = ["구두", "아우터", "가방", "후드", "악세사리"]
     var tmpItemPrice = ["2000원", "4400원", "2300원", "3000원", "30000원"]
@@ -20,6 +20,8 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         
         self.mainCollectionView.delegate = self
         self.mainCollectionView.dataSource = self
+        
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -42,5 +44,11 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         cell.itemPrice.text! += "(1일기준)"
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
+    {
+        let cellSize = CGSize(width:100, height: 200)
+        return cellSize
     }
 }

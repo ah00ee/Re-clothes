@@ -14,8 +14,13 @@ class ItemCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var itemPrice: UILabel!
     
     override func prepareForReuse() {
-        self.itemImage.image = nil
-        self.itemTitle.text = nil
-        self.itemPrice.text = nil
+//        self.itemImage.image = nil
+//        self.itemTitle.text = nil
+//        self.itemPrice.text = nil
     }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+    }
+    
 }

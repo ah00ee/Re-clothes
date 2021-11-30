@@ -7,16 +7,18 @@
 
 import UIKit
 
-class MainViewController: UIViewController, UITableViewDataSource {
+class MainViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var mainTableView: UITableView!
     var tempHashTagLabel = ["# 오늘 핫한 신상", "# 주목해볼만한 아이템", "# 가을 어쩌구 저쩌구"]
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.mainTableView.dataSource = self
-        
+        self.mainTableView.delegate = self
+        mainTableView.reloadData()
     }
     
     // item info 반환
@@ -32,10 +34,12 @@ class MainViewController: UIViewController, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainTableViewCell", for: indexPath) as! MainTableViewCell
         
         // temp text arr
-        cell.labelWithHashtag.text = tempHashTagLabel[indexPath.row]
-        cell.labelWithHashtag.sizeToFit() // 텍스트에 맞추어 레이블 크기 자동조정
-        
+        cell.labelWithHashtag.text = tempHashTagLabel[indexPath.row]    
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 300.0;//Choose your custom row height
     }
 
 }
