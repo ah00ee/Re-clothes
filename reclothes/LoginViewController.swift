@@ -32,9 +32,21 @@ class LoginViewController: UIViewController {
         if Auth.auth().currentUser?.uid != nil {
             self.present(mainVC, animated: true, completion: nil)
         }
+        loginLabel.textAlignment = .center
     }
     
     func saveUserInfo(){
+        let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
+        guard let mainVC = storyboard?.instantiateViewController(identifier: "MainViewController")else{
+            return
+        }
+        mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        
+        guard let popupVC = storyboard?.instantiateViewController(identifier: "PopUpViewController")else{
+            return
+        }
+        popupVC.modalPresentationStyle = .overCurrentContext
+        
         // save userinfo
         UserApi.shared.me(){ [self](user,error) in
             if let error = error{
@@ -58,11 +70,13 @@ class LoginViewController: UIViewController {
                         print(error)
                         print("이미 가입된 회원입니다!")
                         Auth.auth().signIn(withEmail: email, password: "\(String(describing: user?.id))", completion: nil)
+                        present(mainVC, animated: true, completion: nil)
                     } else {
                         ref = Database.database().reference().child("user")
                         self.ref.child("\(String(describing: user?.id))").setValue(["nickname": nickname, "email": email, "gender": gender, "bday": bday])
                         print("회원가입이 완료되었습니다.")
-                        UserDefaults.standard.set(nickname, forKey: "userName")
+                        present(mainVC, animated: true, completion: nil)
+                        mainVC.present(popupVC, animated: true, completion: nil)
                     }
                 }
             }
@@ -70,12 +84,6 @@ class LoginViewController: UIViewController {
     }
    
     @IBAction func loginButton(_ sender: Any) {
-        let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
-        guard let mainVC = storyboard?.instantiateViewController(identifier: "MainViewController")else{
-            return
-        }
-        mainVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
-        
         // 카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {
             print("kakaotalk here")
@@ -88,7 +96,6 @@ class LoginViewController: UIViewController {
                     _ = oauthToken
       
                     self.saveUserInfo()
-                    self.present(mainVC, animated: true, completion: nil)
                 }
             }
         }
@@ -104,7 +111,6 @@ class LoginViewController: UIViewController {
                     _ = oauthToken
                     
                     self.saveUserInfo()
-                    self.present(mainVC, animated: true, completion: nil)
                 }
             }
         }
