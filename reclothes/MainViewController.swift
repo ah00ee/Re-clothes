@@ -17,9 +17,11 @@ class MainViewController: UIViewController, UITableViewDataSource {
         // Do any additional setup after loading the view.
         self.mainTableView.dataSource = self
         
-        // MainTableViewCell.xib에서 만든 셀을 등록
-        let nibName = UINib(nibName: "MainTableViewCell", bundle: nil)
-        self.mainTableView.register(nibName, forCellReuseIdentifier: "mainCollectionViewCell")
+    }
+    
+    // item info 반환
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController else { return }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -27,11 +29,11 @@ class MainViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "mainCollectionViewCell", for: indexPath) as! MainTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mainTableViewCell", for: indexPath) as! MainTableViewCell
         
         // temp text arr
-        cell.labelWithHashTag.text = tempHashTagLabel[indexPath.row]
-        cell.labelWithHashTag.sizeToFit() // 텍스트에 맞추어 레이블 크기 자동조정
+        cell.labelWithHashtag.text = tempHashTagLabel[indexPath.row]
+        cell.labelWithHashtag.sizeToFit() // 텍스트에 맞추어 레이블 크기 자동조정
         
         return cell
     }

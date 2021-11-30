@@ -12,7 +12,6 @@
 		60DC74B12704CD95004AD74B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74AF2704CD95004AD74B /* Main.storyboard */; };
 		60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B22704CD96004AD74B /* Assets.xcassets */; };
 		60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */; };
-		7B2000D32753A4270076AC3E /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B2000D22753A4270076AC3E /* account.png */; };
 		7B7912F82755CD000067192A /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7912F72755CD000067192A /* PopUpViewController.swift */; };
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
 		7B8552962755F7E40020457D /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8552952755F7E40020457D /* LikesViewController.swift */; };
@@ -23,10 +22,6 @@
 		BF48C1E5274B610C008E58E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF48C1E4274B610C008E58E8 /* GoogleService-Info.plist */; };
 		BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */; };
 		BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022452722E66A00EAA2C4 /* MainViewController.swift */; };
-		BF7022492722E72A00EAA2C4 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */; };
-		BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */; };
-		BF70224D2722E81500EAA2C4 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */; };
-		BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */; };
 		BF7022502722F1C900EAA2C4 /* reclothes_logo_without_background.png in Resources */ = {isa = PBXBuildFile; fileRef = BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */; };
 		BF705598274DE4B700D21D88 /* category05.png in Resources */ = {isa = PBXBuildFile; fileRef = BF705593274DE4B700D21D88 /* category05.png */; };
 		BF705599274DE4B700D21D88 /* category01.png in Resources */ = {isa = PBXBuildFile; fileRef = BF705594274DE4B700D21D88 /* category01.png */; };
@@ -35,6 +30,12 @@
 		BF70559C274DE4B700D21D88 /* category02.png in Resources */ = {isa = PBXBuildFile; fileRef = BF705597274DE4B700D21D88 /* category02.png */; };
 		BFB03F79272FD10D00C9F2D0 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */; };
 		BFB03F7B272FD1E400C9F2D0 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */; };
+		BFFF00642756640B000D6DA6 /* account.png in Resources */ = {isa = PBXBuildFile; fileRef = BFFF00632756640B000D6DA6 /* account.png */; };
+		BFFF006627566611000D6DA6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF006527566610000D6DA6 /* DetailViewController.swift */; };
+		BFFF006827567110000D6DA6 /* HashtagCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF006727567110000D6DA6 /* HashtagCollectionViewCell.swift */; };
+		BFFF006A27567912000D6DA6 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF006927567912000D6DA6 /* ProfileView.swift */; };
+		BFFF006E27569789000D6DA6 /* MainTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF006D27569789000D6DA6 /* MainTableViewCell.swift */; };
+		BFFF007027569855000D6DA6 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFF006F27569855000D6DA6 /* ItemCollectionViewCell.swift */; };
 		D3A9AFCEE936BE6531ABAD12 /* Pods_reclothes_reclothesUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */; };
 		FB7C9947BA45CBB94912AAB9 /* Pods_reclothesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */; };
 /* End PBXBuildFile section */
@@ -68,7 +69,6 @@
 		60DC74B72704CD96004AD74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60DC74BC2704CD96004AD74B /* reclothesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DC74C72704CD96004AD74B /* reclothesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7B2000D22753A4270076AC3E /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = account.png; path = ../../../Downloads/account.png; sourceTree = "<group>"; };
 		7B410E7427257F6700FE77D4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7B7912F72755CD000067192A /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,10 +83,6 @@
 		BF48C1E4274B610C008E58E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = reclothes_logo.jpeg; path = ../reclothes/reclothes_logo.jpeg; sourceTree = "<group>"; };
 		BF7022452722E66A00EAA2C4 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
-		BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainTableViewCell.xib; sourceTree = "<group>"; };
-		BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
-		BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
 		BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reclothes_logo_without_background.png; sourceTree = "<group>"; };
 		BF705593274DE4B700D21D88 /* category05.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category05.png; sourceTree = "<group>"; };
 		BF705594274DE4B700D21D88 /* category01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category01.png; sourceTree = "<group>"; };
@@ -95,6 +91,12 @@
 		BF705597274DE4B700D21D88 /* category02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = category02.png; sourceTree = "<group>"; };
 		BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
+		BFFF00632756640B000D6DA6 /* account.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = account.png; sourceTree = "<group>"; };
+		BFFF006527566610000D6DA6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		BFFF006727567110000D6DA6 /* HashtagCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HashtagCollectionViewCell.swift; sourceTree = "<group>"; };
+		BFFF006927567912000D6DA6 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BFFF006D27569789000D6DA6 /* MainTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewCell.swift; sourceTree = "<group>"; };
+		BFFF006F27569855000D6DA6 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		E7BA1E2B872D2B17042EF754 /* Pods-reclothes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothes.release.xcconfig"; path = "Target Support Files/Pods-reclothes/Pods-reclothes.release.xcconfig"; sourceTree = "<group>"; };
 		EADD0D09D193EC951FEBDD93 /* Pods_reclothes_reclothesUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothes_reclothesUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,22 +170,23 @@
 				7B8D80D8274AA5C1006C8DFC /* GoogleService-Info.plist */,
 				7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */,
 				60DC74A92704CD95004AD74B /* AppDelegate.swift */,
-				BF70224B2722E81500EAA2C4 /* ItemCollectionViewCell.swift */,
-				BF70224C2722E81500EAA2C4 /* ItemCollectionViewCell.xib */,
 				60DC74AD2704CD95004AD74B /* LoginViewController.swift */,
 				60DC74AF2704CD95004AD74B /* Main.storyboard */,
+				BFFF006927567912000D6DA6 /* ProfileView.swift */,
+				BFFF006727567110000D6DA6 /* HashtagCollectionViewCell.swift */,
 				7B8552952755F7E40020457D /* LikesViewController.swift */,
 				7B7912F72755CD000067192A /* PopUpViewController.swift */,
 				BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */,
 				BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */,
 				BF7022452722E66A00EAA2C4 /* MainViewController.swift */,
+				BFFF006D27569789000D6DA6 /* MainTableViewCell.swift */,
+				BFFF006F27569855000D6DA6 /* ItemCollectionViewCell.swift */,
 				BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */,
-				BF7022472722E72A00EAA2C4 /* MainTableViewCell.swift */,
-				BF7022482722E72A00EAA2C4 /* MainTableViewCell.xib */,
 				60DC74B22704CD96004AD74B /* Assets.xcassets */,
 				60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */,
 				60DC74B72704CD96004AD74B /* Info.plist */,
 				BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */,
+				BFFF006527566610000D6DA6 /* DetailViewController.swift */,
 			);
 			path = reclothes;
 			sourceTree = "<group>";
@@ -191,7 +194,7 @@
 		7BF4749827071B7500B863CF /* image */ = {
 			isa = PBXGroup;
 			children = (
-				7B2000D22753A4270076AC3E /* account.png */,
+				BFFF00632756640B000D6DA6 /* account.png */,
 				BF705592274DE4A000D21D88 /* categoryImgs */,
 				7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */,
 				BF70224F2722F1C900EAA2C4 /* reclothes_logo_without_background.png */,
@@ -336,10 +339,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */,
-				7B2000D32753A4270076AC3E /* account.png in Resources */,
+				BFFF00642756640B000D6DA6 /* account.png in Resources */,
 				BF70559A274DE4B700D21D88 /* category03.png in Resources */,
 				BF48C1E5274B610C008E58E8 /* GoogleService-Info.plist in Resources */,
-				BF70224E2722E81500EAA2C4 /* ItemCollectionViewCell.xib in Resources */,
 				BF70559B274DE4B700D21D88 /* category04.png in Resources */,
 				BF70559C274DE4B700D21D88 /* category02.png in Resources */,
 				BF705599274DE4B700D21D88 /* category01.png in Resources */,
@@ -347,7 +349,6 @@
 				BF7022502722F1C900EAA2C4 /* reclothes_logo_without_background.png in Resources */,
 				60DC74B12704CD95004AD74B /* Main.storyboard in Resources */,
 				7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */,
-				BF70224A2722E72A00EAA2C4 /* MainTableViewCell.xib in Resources */,
 				BF705598274DE4B700D21D88 /* category05.png in Resources */,
 				BF7022382722DA4A00EAA2C4 /* reclothes_logo.jpeg in Resources */,
 			);
@@ -511,17 +512,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFFF007027569855000D6DA6 /* ItemCollectionViewCell.swift in Sources */,
+				BFFF006627566611000D6DA6 /* DetailViewController.swift in Sources */,
 				BFB03F7B272FD1E400C9F2D0 /* PostViewController.swift in Sources */,
 				60DC74AE2704CD95004AD74B /* LoginViewController.swift in Sources */,
 				BFB03F79272FD10D00C9F2D0 /* UserViewController.swift in Sources */,
 				7B7912F82755CD000067192A /* PopUpViewController.swift in Sources */,
 				60DC74AA2704CD95004AD74B /* AppDelegate.swift in Sources */,
 				7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */,
+				BFFF006A27567912000D6DA6 /* ProfileView.swift in Sources */,
+				BFFF006827567110000D6DA6 /* HashtagCollectionViewCell.swift in Sources */,
 				BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */,
-				BF7022492722E72A00EAA2C4 /* MainTableViewCell.swift in Sources */,
+				BFFF006E27569789000D6DA6 /* MainTableViewCell.swift in Sources */,
 				BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */,
 				BF48C1D6274A2975008E58E8 /* CategoryViewController.swift in Sources */,
-				BF70224D2722E81500EAA2C4 /* ItemCollectionViewCell.swift in Sources */,
 				7B8552962755F7E40020457D /* LikesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
