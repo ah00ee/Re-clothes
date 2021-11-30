@@ -1,27 +1,34 @@
 //
-//  DetailViewController.swift
+//  SchedulerViewController.swift
 //  reclothes
 //
-//  Created by 문다 on 2021/11/30.
+//  Created by 문다 on 2021/12/01.
 //
 
 import UIKit
+import FSCalendar
 
-class DetailViewController: UIViewController {
-
-    @IBOutlet weak var itemTitle: UILabel!
+class SchedulerViewController: UIViewController {
     
-    @IBOutlet weak var profileView: UIView!
-    @IBOutlet weak var sharerImg: UIImageView!
-    
-    
+    @IBOutlet weak var calendar: FSCalendar!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileView.layer.borderColor = UIColor.black.cgColor
-        profileView.layer.borderWidth = 0.7
+        
+        calendar.allowsMultipleSelection = true
+        
+        // 꾹 눌러 스와이프해서 multi select
+        calendar.swipeToChooseGesture.isEnabled = true
+        calendar.appearance.borderRadius = 0
+
         // Do any additional setup after loading the view.
     }
+
+    // 일단 dismiss
+    @IBAction func completeReserve(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

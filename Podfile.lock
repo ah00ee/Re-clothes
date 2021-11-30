@@ -497,6 +497,7 @@ PODS:
     - FirebasePhoneAuthUI (~> 12.0)
   - FirebaseUI/Storage (12.0.2):
     - FirebaseStorageUI (~> 12.0)
+  - FSCalendar (2.8.2)
   - GoogleAppMeasurement (8.9.1):
     - GoogleAppMeasurement/AdIdSupport (= 8.9.1)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.6)
@@ -618,6 +619,7 @@ PODS:
 DEPENDENCIES:
   - Firebase/Analytics
   - FirebaseUI
+  - FSCalendar
   - KakaoSDK
 
 SPEC REPOS:
@@ -650,6 +652,7 @@ SPEC REPOS:
     - FirebaseStorage
     - FirebaseStorageUI
     - FirebaseUI
+    - FSCalendar
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleSignIn
@@ -701,6 +704,7 @@ SPEC CHECKSUMS:
   FirebaseStorage: 452c98c31ccb40b819764bf3039426c4388d9939
   FirebaseStorageUI: 9f5b32264e77dc073dec45f00c5b3a77e5ca901e
   FirebaseUI: b04b32ead3a6dcd5a50829e14b8f3f6d044d5d62
+  FSCalendar: e6a2eb9c571bf0719ed797ef807e08426753c241
   GoogleAppMeasurement: 837649ad3987936c232f6717c5680216f6243d24
   GoogleDataTransport: 629c20a4d363167143f30ea78320d5a7eb8bd940
   GoogleSignIn: fd381840dbe7c1137aa6dc30849a5c3e070c034a
@@ -723,6 +727,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
 
-PODFILE CHECKSUM: e5f361badf70baaa2b28d76dda6dc2fb179c8a22
+PODFILE CHECKSUM: 3563561203382d25711d8d18e68ee0806bd5c8cc
 
 COCOAPODS: 1.11.2

@@ -12,6 +12,8 @@ target 'reclothes' do
   pod 'Firebase/Analytics'
   pod 'FirebaseUI'
 
+  pod 'FSCalendar'
+
   # Pods for reclothes
 
   target 'reclothesTests' do

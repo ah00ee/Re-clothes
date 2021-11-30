@@ -21,7 +21,9 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         self.mainCollectionView.delegate = self
         self.mainCollectionView.dataSource = self
         
-
+        if let layout = mainCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
+            layout.scrollDirection = .vertical
+        }
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

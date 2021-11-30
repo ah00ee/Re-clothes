@@ -290,7 +290,6 @@
         <!--Re-clothes-->
         <scene sceneID="Pg6-Xs-exz">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q1Y-Rx-DFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="I8Y-Ov-QG3" customClass="DetailViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZRi-AV-ChK">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
@@ -391,10 +390,22 @@
                                     <constraint firstItem="cCy-YX-dzG" firstAttribute="leading" secondItem="3l5-N0-hap" secondAttribute="trailing" constant="10" id="zaP-4y-4Du"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfP-rJ-u8F">
+                                <rect key="frame" x="0.0" y="764" width="390" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="OdE-Le-RuC"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Reserve"/>
+                                <connections>
+                                    <segue destination="TFH-5F-Fem" kind="presentation" id="TOW-G4-ufI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CS0-Mv-o21"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="PfP-rJ-u8F" firstAttribute="leading" secondItem="ZRi-AV-ChK" secondAttribute="leading" id="2x0-NA-IDw"/>
                             <constraint firstItem="CS0-Mv-o21" firstAttribute="trailing" secondItem="w53-9G-SfP" secondAttribute="trailing" constant="20" id="3vH-zE-Kku"/>
                             <constraint firstItem="w53-9G-SfP" firstAttribute="top" secondItem="GCz-4B-G8M" secondAttribute="bottom" constant="10" id="589-yp-Ii9"/>
                             <constraint firstItem="CS0-Mv-o21" firstAttribute="trailing" secondItem="i01-9k-WNF" secondAttribute="trailing" constant="20" id="6MT-4s-RBd"/>
@@ -406,6 +417,8 @@
                             <constraint firstItem="GCz-4B-G8M" firstAttribute="leading" secondItem="CS0-Mv-o21" secondAttribute="leading" constant="20" id="kDO-g9-cOv"/>
                             <constraint firstItem="CS0-Mv-o21" firstAttribute="trailing" secondItem="mL5-4S-IUC" secondAttribute="trailing" constant="20" id="l44-xW-hfc"/>
                             <constraint firstItem="GCz-4B-G8M" firstAttribute="top" secondItem="i01-9k-WNF" secondAttribute="bottom" constant="10" id="qUQ-Y3-akT"/>
+                            <constraint firstAttribute="trailing" secondItem="PfP-rJ-u8F" secondAttribute="trailing" id="tDQ-p4-MP1"/>
+                            <constraint firstAttribute="bottom" secondItem="PfP-rJ-u8F" secondAttribute="bottom" id="v4D-OP-8aX"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Re-clothes" id="F1Q-ts-4W9">
@@ -417,8 +430,56 @@
                         <outlet property="sharerImg" destination="3l5-N0-hap" id="Keu-rG-tXL"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q1Y-Rx-DFw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5625" y="16"/>
+        </scene>
+        <!--Scheduler View Controller-->
+        <scene sceneID="Esc-WL-Dfl">
+            <objects>
+                <viewController storyboardIdentifier="SchedulerViewController" id="TFH-5F-Fem" customClass="SchedulerViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ck8-Dv-Oij">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X0-hG-8K2" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="10" width="370" height="355"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="355" id="BeX-c9-h5q"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAc-rl-g1R">
+                                <rect key="frame" x="0.0" y="710" width="390" height="80"/>
+                                <color key="backgroundColor" red="0.59846608836324877" green="0.61647790670394897" blue="0.59398512365140732" alpha="0.15448963398836096" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="1j6-hH-0VI"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Confirm"/>
+                                <connections>
+                                    <action selector="completeReserve:" destination="TFH-5F-Fem" eventType="touchUpInside" id="nZe-gN-0AM"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Taa-dP-g2U"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="EAc-rl-g1R" secondAttribute="bottom" id="4GB-In-se9"/>
+                            <constraint firstItem="8X0-hG-8K2" firstAttribute="leading" secondItem="Taa-dP-g2U" secondAttribute="leading" constant="10" id="BHD-Zy-c9C"/>
+                            <constraint firstItem="Taa-dP-g2U" firstAttribute="trailing" secondItem="EAc-rl-g1R" secondAttribute="trailing" id="R0f-aZ-ACV"/>
+                            <constraint firstItem="Taa-dP-g2U" firstAttribute="trailing" secondItem="8X0-hG-8K2" secondAttribute="trailing" constant="10" id="TxF-TD-aot"/>
+                            <constraint firstItem="EAc-rl-g1R" firstAttribute="leading" secondItem="Taa-dP-g2U" secondAttribute="leading" id="axV-xh-bsN"/>
+                            <constraint firstItem="8X0-hG-8K2" firstAttribute="top" secondItem="Taa-dP-g2U" secondAttribute="top" constant="10" id="jc9-u8-BsY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="calendar" destination="8X0-hG-8K2" id="17U-lM-sNs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao7-aP-Xlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6484.6153846153848" y="17.772511848341232"/>
         </scene>
         <!--Post View Controller-->
         <scene sceneID="N6c-n3-ZM9">
