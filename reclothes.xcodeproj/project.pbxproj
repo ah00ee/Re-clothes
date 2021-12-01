@@ -20,6 +20,7 @@
 		BF1DA0B62756B58100AAA5BC /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA0B52756B58100AAA5BC /* ReservationViewController.swift */; };
 		BF1DA0B8275723A600AAA5BC /* ItemCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA0B7275723A600AAA5BC /* ItemCollectionViewController.swift */; };
 		BF1DA0BA27574F3C00AAA5BC /* SchedulerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA0B927574F3C00AAA5BC /* SchedulerViewController.swift */; };
+		BF1DA0BC2757549000AAA5BC /* SchedulerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA0BB2757549000AAA5BC /* SchedulerTableViewCell.swift */; };
 		BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */; };
 		BF48C1D6274A2975008E58E8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */; };
 		BF48C1E5274B610C008E58E8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF48C1E4274B610C008E58E8 /* GoogleService-Info.plist */; };
@@ -84,6 +85,7 @@
 		BF1DA0B52756B58100AAA5BC /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
 		BF1DA0B7275723A600AAA5BC /* ItemCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewController.swift; sourceTree = "<group>"; };
 		BF1DA0B927574F3C00AAA5BC /* SchedulerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerViewController.swift; sourceTree = "<group>"; };
+		BF1DA0BB2757549000AAA5BC /* SchedulerTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedulerTableViewCell.swift; sourceTree = "<group>"; };
 		BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		BF48C1E4274B610C008E58E8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				60DC74AD2704CD95004AD74B /* LoginViewController.swift */,
 				60DC74AF2704CD95004AD74B /* Main.storyboard */,
 				BF1DA0B927574F3C00AAA5BC /* SchedulerViewController.swift */,
+				BF1DA0BB2757549000AAA5BC /* SchedulerTableViewCell.swift */,
 				BF1DA0B7275723A600AAA5BC /* ItemCollectionViewController.swift */,
 				BFFF006927567912000D6DA6 /* ProfileView.swift */,
 				BFFF006727567110000D6DA6 /* HashtagCollectionViewCell.swift */,
@@ -537,6 +540,7 @@
 				BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */,
 				BFFF006E27569789000D6DA6 /* MainTableViewCell.swift in Sources */,
 				BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */,
+				BF1DA0BC2757549000AAA5BC /* SchedulerTableViewCell.swift in Sources */,
 				BF48C1D6274A2975008E58E8 /* CategoryViewController.swift in Sources */,
 				7B8552962755F7E40020457D /* LikesViewController.swift in Sources */,
 			);

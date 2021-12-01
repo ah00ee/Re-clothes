@@ -204,10 +204,10 @@
                                 <color key="tintColor" systemColor="systemPurpleColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="calendar.badge.clock" catalog="system" title=""/>
+                                <connections>
+                                    <segue destination="MrU-Cy-3VJ" kind="show" id="wW5-EM-Aul"/>
+                                </connections>
                             </button>
-                            <connections>
-                                <segue destination="MrU-Cy-3VJ" kind="show" id="JIN-Qr-G2S"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -218,21 +218,82 @@
             </objects>
             <point key="canvasLocation" x="3518.4615384615386" y="18.48341232227488"/>
         </scene>
-        <!--View Controller-->
+        <!--Scheduler View Controller-->
         <scene sceneID="E2G-SS-wMv">
             <objects>
-                <viewController id="MrU-Cy-3VJ" sceneMemberID="viewController">
+                <viewController id="MrU-Cy-3VJ" customClass="SchedulerViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hk4-Fw-pvN">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7EV-EM-SRm" customClass="FSCalendar">
+                                <rect key="frame" x="10" y="91" width="370" height="370"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="7EV-EM-SRm" secondAttribute="height" multiplier="1:1" id="ULp-8v-Sry"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="xDD-Gk-RsX">
+                                <rect key="frame" x="10" y="510" width="370" height="251"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="schedulerTableViewCell" id="AKj-PA-aiV" customClass="SchedulerTableViewCell" customModule="reclothes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="370" height="43"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AKj-PA-aiV" id="av4-Sv-o4Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8C-MM-Geh">
+                                                    <rect key="frame" x="40" y="11" width="310" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="A8C-MM-Geh" firstAttribute="top" secondItem="av4-Sv-o4Q" secondAttribute="topMargin" id="9UA-rv-WMf"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="A8C-MM-Geh" secondAttribute="trailing" id="Jhs-0g-kS3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="A8C-MM-Geh" secondAttribute="bottom" id="RLI-KP-1jh"/>
+                                                <constraint firstItem="A8C-MM-Geh" firstAttribute="leading" secondItem="av4-Sv-o4Q" secondAttribute="leadingMargin" constant="20" id="ZxS-4c-zAM"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="contents" destination="A8C-MM-Geh" id="SSQ-7f-lhT"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🖍 SCHEDULE 📆" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="I8s-Ry-Zgd">
+                                <rect key="frame" x="10" y="466" width="370" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Q9c-E9-Ub5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xDD-Gk-RsX" firstAttribute="top" secondItem="I8s-Ry-Zgd" secondAttribute="bottom" id="1m7-ik-ybB"/>
+                            <constraint firstItem="xDD-Gk-RsX" firstAttribute="bottom" secondItem="Q9c-E9-Ub5" secondAttribute="bottom" id="3Je-90-yt1"/>
+                            <constraint firstItem="I8s-Ry-Zgd" firstAttribute="top" secondItem="7EV-EM-SRm" secondAttribute="bottom" constant="5" id="8MM-lJ-U6j"/>
+                            <constraint firstItem="xDD-Gk-RsX" firstAttribute="top" secondItem="I8s-Ry-Zgd" secondAttribute="bottom" id="J1W-I0-oWD"/>
+                            <constraint firstItem="Q9c-E9-Ub5" firstAttribute="trailing" secondItem="xDD-Gk-RsX" secondAttribute="trailing" constant="10" id="Mmr-hh-TW5"/>
+                            <constraint firstItem="Q9c-E9-Ub5" firstAttribute="trailing" secondItem="7EV-EM-SRm" secondAttribute="trailing" constant="10" id="dkV-bM-2zH"/>
+                            <constraint firstItem="7EV-EM-SRm" firstAttribute="leading" secondItem="Q9c-E9-Ub5" secondAttribute="leading" constant="10" id="iMg-D1-RWD"/>
+                            <constraint firstItem="xDD-Gk-RsX" firstAttribute="leading" secondItem="Q9c-E9-Ub5" secondAttribute="leading" constant="10" id="rhd-5x-vcr"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Soo-sz-E5A"/>
+                    <connections>
+                        <outlet property="scheduleList" destination="xDD-Gk-RsX" id="HAS-UE-ekx"/>
+                        <outlet property="scheduler" destination="7EV-EM-SRm" id="8O3-R2-BiK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Cc-kG-AEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4575" y="-323"/>
+            <point key="canvasLocation" x="4573.8461538461534" y="-323.45971563981038"/>
         </scene>
         <!--Re-clothes-->
         <scene sceneID="KVe-3Z-CQn">
@@ -467,11 +528,11 @@
             </objects>
             <point key="canvasLocation" x="6645" y="16"/>
         </scene>
-        <!--Scheduler View Controller-->
+        <!--Reservation View Controller-->
         <scene sceneID="Esc-WL-Dfl">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ao7-aP-Xlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="SchedulerViewController" id="TFH-5F-Fem" customClass="SchedulerViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SchedulerViewController" id="TFH-5F-Fem" customClass="ReservationViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ck8-Dv-Oij">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
