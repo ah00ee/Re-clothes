@@ -196,7 +196,20 @@
                             <constraint firstItem="Bat-e7-eSb" firstAttribute="leading" secondItem="nZj-G9-tjJ" secondAttribute="leading" id="sey-b6-IDo"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Re-clothes" id="oDv-IM-8kG"/>
+                    <navigationItem key="navigationItem" title="Re-clothes" id="oDv-IM-8kG">
+                        <barButtonItem key="rightBarButtonItem" image="calendar.badge.clock" catalog="system" style="plain" id="lnC-B3-oXF">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="5g7-tF-F4z">
+                                <rect key="frame" x="288" y="5" width="86" height="34.333333333333336"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" systemColor="systemPurpleColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="calendar.badge.clock" catalog="system" title=""/>
+                            </button>
+                            <connections>
+                                <segue destination="MrU-Cy-3VJ" kind="show" id="JIN-Qr-G2S"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mainTableView" destination="Bat-e7-eSb" id="rV3-ZP-c2g"/>
                     </connections>
@@ -204,6 +217,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NTx-5B-5oG" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3518.4615384615386" y="18.48341232227488"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E2G-SS-wMv">
+            <objects>
+                <viewController id="MrU-Cy-3VJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hk4-Fw-pvN">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Q9c-E9-Ub5"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Soo-sz-E5A"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cc-kG-AEz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4575" y="-323"/>
         </scene>
         <!--Re-clothes-->
         <scene sceneID="KVe-3Z-CQn">
@@ -1319,6 +1348,7 @@
     </inferredMetricsTieBreakers>
     <resources>
         <image name="account.png" width="64" height="64"/>
+        <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
         <image name="camera.on.rectangle" catalog="system" width="128" height="96"/>
         <image name="cart.badge.plus" catalog="system" width="128" height="106"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
@@ -1341,6 +1371,9 @@
         </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

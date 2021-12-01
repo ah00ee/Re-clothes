@@ -8,7 +8,7 @@
 import UIKit
 import FSCalendar
 
-class SchedulerViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
+class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var confirmBtn: UIButton!
