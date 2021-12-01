@@ -9,18 +9,26 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemTitle: UILabel!
+    
+    @IBOutlet weak var hashtagCollection: UICollectionView!
     
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var sharerImg: UIImageView!
+    @IBOutlet weak var reserveBtn: UIButton!
     
-    
+    // description 안넣음 아직
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        profileView.layer.borderColor = UIColor.black.cgColor
+        
+        itemImage.layer.borderColor = UIColor.lightGray.cgColor
+        itemImage.layer.borderWidth = 0.7
+        profileView.layer.borderColor = UIColor.lightGray.cgColor
         profileView.layer.borderWidth = 0.7
-        // Do any additional setup after loading the view.
+        
+        reserveBtn.layer.cornerRadius = 20
     }
     /*
     // MARK: - Navigation
