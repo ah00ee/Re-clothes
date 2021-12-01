@@ -20,16 +20,6 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         
         self.mainCollectionView.delegate = self
         self.mainCollectionView.dataSource = self
-        
-        if let layout = mainCollectionView.collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.scrollDirection = .vertical
-        }
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -38,6 +28,9 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "itemCollectionViewCell", for: indexPath) as! ItemCollectionViewCell
+        
+        cell.layer.borderWidth = 0.7
+        cell.layer.borderColor = UIColor.lightGray.cgColor
         
         
         cell.itemImage.image = nil
@@ -50,7 +43,7 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize
     {
-        let cellSize = CGSize(width:100, height: 200)
+        let cellSize = CGSize(width:120, height: 180)
         return cellSize
     }
 }

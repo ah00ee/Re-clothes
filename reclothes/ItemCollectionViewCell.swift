@@ -23,5 +23,12 @@ class ItemCollectionViewCell: UICollectionViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
     }
-    
+    override var isSelected: Bool {
+        didSet{
+            if isSelected {
+                itemTitle.textColor = .lightGray
+                itemPrice.textColor = .lightGray
+            }
+        }
+    }
 }
