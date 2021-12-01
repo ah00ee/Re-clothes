@@ -56,7 +56,7 @@ extension SchedulerViewController: FSCalendarDelegate, FSCalendarDataSource{
 
 extension SchedulerViewController: UITableViewDelegate, UITableViewDataSource{
     
-    // 일정 다중 선택 시 일정을 모아서 보여줄때 필ㄹ요함
+    // 일정 다중 선택 시 일정을 모아서 보여줄때 필요함
 //    func numberOfSections(in tableView: UITableView) -> Int {
 //        <#code#>
 //    }

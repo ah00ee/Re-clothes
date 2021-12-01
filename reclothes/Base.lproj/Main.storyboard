@@ -238,14 +238,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="schedulerTableViewCell" id="AKj-PA-aiV" customClass="SchedulerTableViewCell" customModule="reclothes" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="370" height="43"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="370" height="43.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AKj-PA-aiV" id="av4-Sv-o4Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="370" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="43.333332061767578"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8C-MM-Geh">
-                                                    <rect key="frame" x="40" y="11" width="310" height="21"/>
+                                                    <rect key="frame" x="40" y="10.999999999999998" width="310" height="21.333333333333329"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -299,24 +299,24 @@
         <scene sceneID="KVe-3Z-CQn">
             <objects>
                 <viewController id="oKL-cS-CxS" customClass="UserViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ksz-qO-Jrc">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="ksz-qO-Jrc">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nU0-Cp-Esl">
-                                <rect key="frame" x="20" y="113" width="350" height="180"/>
+                                <rect key="frame" x="20" y="108" width="360" height="180"/>
                                 <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="account.png" translatesAutoresizingMaskIntoConstraints="NO" id="DyG-6O-Svv">
+                                        <rect key="frame" x="0.0" y="8" width="120" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ce-so-Jyz">
-                                        <rect key="frame" x="136" y="30" width="107" height="21"/>
+                                        <rect key="frame" x="122" y="30" width="107" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="account.png" translatesAutoresizingMaskIntoConstraints="NO" id="DyG-6O-Svv">
-                                        <rect key="frame" x="8" y="8" width="120" height="99"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
@@ -364,7 +364,7 @@
                             <constraint firstItem="nU0-Cp-Esl" firstAttribute="height" secondItem="jLq-Bi-xNS" secondAttribute="height" multiplier="0.5" id="cxz-vM-Nhm"/>
                             <constraint firstItem="06c-Xo-IbA" firstAttribute="trailing" secondItem="nU0-Cp-Esl" secondAttribute="trailing" constant="20" id="kTn-Oa-TFT"/>
                             <constraint firstItem="nU0-Cp-Esl" firstAttribute="leading" secondItem="06c-Xo-IbA" secondAttribute="leading" constant="20" id="mda-ig-Qay"/>
-                            <constraint firstItem="nU0-Cp-Esl" firstAttribute="top" secondItem="06c-Xo-IbA" secondAttribute="top" constant="25" id="nhR-Bf-RfN"/>
+                            <constraint firstItem="nU0-Cp-Esl" firstAttribute="top" secondItem="06c-Xo-IbA" secondAttribute="top" constant="20" id="nhR-Bf-RfN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Re-clothes" id="wrx-38-Tng"/>
@@ -531,7 +531,6 @@
         <!--Reservation View Controller-->
         <scene sceneID="Esc-WL-Dfl">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao7-aP-Xlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="SchedulerViewController" id="TFH-5F-Fem" customClass="ReservationViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ck8-Dv-Oij">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
@@ -584,6 +583,7 @@
                         <outlet property="confirmLabel" destination="Cr1-WX-Gui" id="Wto-dj-Qck"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ao7-aP-Xlv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7567.6923076923076" y="15.639810426540283"/>
         </scene>
@@ -595,29 +595,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="상품 제목 입력 ..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XeV-QN-Tzj">
-                                <rect key="frame" x="180" y="68" width="190" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="상품 제목" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XeV-QN-Tzj">
+                                <rect key="frame" x="180" y="68.666666666666671" width="190" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qga-LZ-sGE">
-                                <rect key="frame" x="323" y="20" width="47" height="28"/>
+                                <rect key="frame" x="325" y="20" width="45" height="28.666666666666671"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="post">
-                                            <attributes>
-                                                <font key="NSFont" size="12" name="Helvetica"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
+                                <buttonConfiguration key="configuration" style="plain" title="등록">
+                                    <fontDescription key="titleFontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="12"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <action selector="postBtn:" destination="ZYb-pC-91c" eventType="touchUpInside" id="Nyh-io-xuk"/>
+                                    <action selector="postBtn:" destination="ZYb-pC-91c" eventType="touchUpInside" id="aBs-lQ-sQQ"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="1일 기준 셰어 가격 (원)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-Pm-mbp">
-                                <rect key="frame" x="180" y="117" width="190" height="34"/>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="셰어 가격(원)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G7Q-Pm-mbp">
+                                <rect key="frame" x="180" y="117.66666666666669" width="190" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -716,7 +710,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Size (상세 표기)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bKs-Nc-d2G">
-                                <rect key="frame" x="180" y="166" width="190" height="34"/>
+                                <rect key="frame" x="180" y="166.66666666666666" width="190" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -728,7 +722,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" showsMenuAsPrimaryAction="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ery-Dr-IbG">
-                                <rect key="frame" x="292.66666666666669" y="217" width="77.333333333333314" height="30"/>
+                                <rect key="frame" x="292.66666666666669" y="217.66666666666666" width="77.333333333333314" height="30"/>
                                 <menu key="menu" id="lrx-eh-tYM">
                                     <children>
                                         <command title="Item 1" id="kAK-Ck-8iT"/>
@@ -738,9 +732,12 @@
                                 <state key="normal" title="None">
                                     <color key="titleColor" red="1" green="0.43177513332523976" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <action selector="postBtn:" destination="ZYb-pC-91c" eventType="touchUpInside" id="VxM-An-SYT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="카테고리 분류" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="axD-4a-VFN">
-                                <rect key="frame" x="180" y="222" width="92.666666666666686" height="21"/>
+                                <rect key="frame" x="180" y="222.66666666666666" width="92.666666666666686" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="systemGray3Color"/>
                                 <nil key="highlightedColor"/>
@@ -825,6 +822,8 @@
                     <connections>
                         <outlet property="hashtagTextView" destination="MEr-fB-VzR" id="aaI-gt-KUY"/>
                         <outlet property="imgView" destination="reD-7E-YGf" id="5py-Op-SJh"/>
+                        <outlet property="itemPrice" destination="G7Q-Pm-mbp" id="bDP-o3-Y4r"/>
+                        <outlet property="itemTitle" destination="XeV-QN-Tzj" id="edu-CO-P3t"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hIf-Y1-lrY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

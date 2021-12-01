@@ -6,22 +6,30 @@
 //
 
 import UIKit
+import Photos
 import FirebaseStorage
+import FirebaseDatabase
 
 class PostViewController: UIViewController {
+    var ref: DatabaseReference!
     
     let imgPicker = UIImagePickerController()
-    
     let imgStorage = Storage.storage()
+
+    var filePath = ""
     
     @IBOutlet weak var imgView: UIImageView!
     @IBOutlet weak var hashtagTextView: UITextView!
+    
+    @IBOutlet weak var itemTitle: UITextField!
+    @IBOutlet weak var itemPrice: UITextField!
     
     // 이미지 추가 버튼 클릭시 뜨는 팝업창(photo, camera, cancle 버튼이 나옴)
     @IBAction func addImgBtn(_ sender: Any) {
         let actionSheet = UIAlertController(title: "Select Image", message: "Photo or Camera", preferredStyle: .actionSheet)
         actionSheet.addAction(UIAlertAction(title: "Photo", style: UIAlertAction.Style.default, handler: {(action) in self.openLibrary()}))
         actionSheet.addAction(UIAlertAction(title: "Camera", style: UIAlertAction.Style.default, handler: {(action) in self.openCamera()}))
+        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         cancelAction.setValue(UIColor.red, forKey: "titleTextColor")
         actionSheet.addAction(cancelAction)
@@ -42,11 +50,12 @@ class PostViewController: UIViewController {
     }
     
     @IBAction func postBtn(_ sender: UIButton) {
-        var img = imgView.image
+        ref = Database.database().reference().child("item")
+
+        let img = imgView.image
         var data = Data()
         data = img!.jpegData(compressionQuality: 0.8)!
         
-        let filePath = "test"
         let metaData = StorageMetadata()
         metaData.contentType = "image/png"
         imgStorage.reference().child(filePath).putData(data, metadata: metaData){
@@ -55,6 +64,16 @@ class PostViewController: UIViewController {
             }
             else{
                 print("업로드 성공")
+                
+                // "상품정보" should be changed.
+                self.imgStorage.reference().child("images/\(self.filePath)").downloadURL{ [self] url, error in
+                    self.ref.child("상품정보").setValue(["title": itemTitle.text!, "price": Int(itemPrice.text!), "imgPath": filePath])
+                }
+                self.dismiss(animated: true, completion: nil)
+                
+                // 상품 등록 클릭 후, 마이페이지에 게시물 셀 생성 구현하기
+                //
+                
             }
         }
     }
@@ -80,7 +99,12 @@ UINavigationControllerDelegate{
             imgView.image = image
             print(info)
         }
+        
+        if let asset = info[UIImagePickerController.InfoKey.imageURL] as? URL {
+            filePath = asset.lastPathComponent
+            print(filePath)
+        }
+        
         dismiss(animated: true, completion: nil)
-      
     }
 }
