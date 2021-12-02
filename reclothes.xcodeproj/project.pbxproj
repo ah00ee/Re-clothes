@@ -12,6 +12,7 @@
 		60DC74B12704CD95004AD74B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74AF2704CD95004AD74B /* Main.storyboard */; };
 		60DC74B32704CD96004AD74B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B22704CD96004AD74B /* Assets.xcassets */; };
 		60DC74B62704CD96004AD74B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */; };
+		7B2F12C32758FA3500C5D6DC /* PostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B2F12C22758FA3500C5D6DC /* PostCollectionViewCell.swift */; };
 		7B7912F82755CD000067192A /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7912F72755CD000067192A /* PopUpViewController.swift */; };
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
 		7B8552962755F7E40020457D /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8552952755F7E40020457D /* LikesViewController.swift */; };
@@ -73,6 +74,7 @@
 		60DC74B72704CD96004AD74B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		60DC74BC2704CD96004AD74B /* reclothesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DC74C72704CD96004AD74B /* reclothesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = reclothesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7B2F12C22758FA3500C5D6DC /* PostCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCollectionViewCell.swift; sourceTree = "<group>"; };
 		7B410E7427257F6700FE77D4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		7B7912F72755CD000067192A /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -193,6 +195,7 @@
 				BFFF006D27569789000D6DA6 /* MainTableViewCell.swift */,
 				BFFF006F27569855000D6DA6 /* ItemCollectionViewCell.swift */,
 				BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */,
+				7B2F12C22758FA3500C5D6DC /* PostCollectionViewCell.swift */,
 				60DC74B22704CD96004AD74B /* Assets.xcassets */,
 				60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */,
 				60DC74B72704CD96004AD74B /* Info.plist */,
@@ -524,6 +527,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B2F12C32758FA3500C5D6DC /* PostCollectionViewCell.swift in Sources */,
 				BFFF007027569855000D6DA6 /* ItemCollectionViewCell.swift in Sources */,
 				BF1DA0B8275723A600AAA5BC /* ItemCollectionViewController.swift in Sources */,
 				BF1DA0BA27574F3C00AAA5BC /* SchedulerViewController.swift in Sources */,

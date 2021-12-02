@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Photos
+import KakaoSDKUser
 import FirebaseStorage
 import FirebaseDatabase
 
@@ -49,8 +49,8 @@ class PostViewController: UIViewController {
         present(imgPicker ,animated: false, completion: nil)
     }
     
-    @IBAction func postBtn(_ sender: UIButton) {
-        ref = Database.database().reference().child("item")
+    @IBAction func postBtn(_ sender: UIButton){
+        ref = Database.database().reference()
 
         let img = imgView.image
         var data = Data()
@@ -65,19 +65,36 @@ class PostViewController: UIViewController {
             else{
                 print("업로드 성공")
                 
-                // "상품정보" should be changed.
-                self.imgStorage.reference().child("images/\(self.filePath)").downloadURL{ [self] url, error in
-                    self.ref.child("상품정보").setValue(["title": itemTitle.text!, "price": Int(itemPrice.text!), "imgPath": filePath])
+                // itemDB에 item 추가
+                let postID = self.ref.child("item").childByAutoId()
+                postID.setValue(["title": self.itemTitle.text!, "price": Int(self.itemPrice.text!)!, "imgPath": self.filePath])
+                
+                // userDB에 itemID 추가
+                UserApi.shared.me(){ [self](user,error) in
+                    if let error = error{
+                        print("error")
+                    }
+                    else{
+                        ref.child("user/\(String(describing: user?.id))").getData(completion:  { error, snapshot in
+                            guard error == nil else {
+                                print(error!.localizedDescription)
+                                return;
+                            }
+                            let value = snapshot.value as! [String: AnyObject]
+                            var ids = [String]()
+                            if value["itemID"] != nil{
+                                ids = value["itemID"] as! [String]
+                            }
+                            ids.append(postID.key!)
+                            ref.child("user/\(String(describing: user?.id))/itemID").setValue(ids)
+                        });
+                    }
                 }
                 self.dismiss(animated: true, completion: nil)
-                
-                // 상품 등록 클릭 후, 마이페이지에 게시물 셀 생성 구현하기
-                //
-                
             }
         }
     }
-    
+
     func openCamera(){ // 카메라 오픈
         if(UIImagePickerController.isSourceTypeAvailable(.camera)){
             imgPicker.sourceType = .camera

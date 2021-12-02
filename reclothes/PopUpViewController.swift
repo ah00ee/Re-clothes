@@ -8,9 +8,9 @@
 import UIKit
 
 class PopUpViewController: UIViewController {
-
     @IBOutlet weak var introLabel: UILabel!
-    @IBOutlet weak var introText: UITextView!
+    @IBOutlet weak var introText: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +18,7 @@ class PopUpViewController: UIViewController {
         introText.text = "반갑습니다!\nRe-clothes에서 원하는 옷을 대여하고\n마음껏 입어보세요!"
         introLabel.text = "Re-clothes"
         
+        introText.numberOfLines = 0
         introText.textAlignment = .center
         introLabel.textAlignment = .center
     }
