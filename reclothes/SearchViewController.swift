@@ -32,7 +32,14 @@ class SearchViewController: UIViewController {
         //        self.navigationItem.hidesSearchBarWhenScrolling = false
         
         let search = UIBarButtonItem(systemItem: .search, primaryAction: UIAction(handler: { _ in
+            // 검색 내용 저장
+            guard let text = searchController.searchBar.text else {
+                return
+            }
+            print(text)
+            
             // To do: 검색 결과 페이지로 연결
+            
         }))
         self.navigationItem.rightBarButtonItem = search
     }
