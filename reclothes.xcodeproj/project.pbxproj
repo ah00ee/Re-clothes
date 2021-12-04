@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		60CF85E7275B8A0C000C7215 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60CF85E6275B8A0C000C7215 /* SearchViewController.swift */; };
 		60DC74AA2704CD95004AD74B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DC74A92704CD95004AD74B /* AppDelegate.swift */; };
 		60DC74AE2704CD95004AD74B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60DC74AD2704CD95004AD74B /* LoginViewController.swift */; };
 		60DC74B12704CD95004AD74B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 60DC74AF2704CD95004AD74B /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 /* Begin PBXFileReference section */
 		0A21EBC1781150179BCCDAE0 /* Pods-reclothes-reclothesUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothes-reclothesUITests.release.xcconfig"; path = "Target Support Files/Pods-reclothes-reclothesUITests/Pods-reclothes-reclothesUITests.release.xcconfig"; sourceTree = "<group>"; };
 		4EEA7579B8CF4F31DA90A480 /* Pods-reclothes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothes.debug.xcconfig"; path = "Target Support Files/Pods-reclothes/Pods-reclothes.debug.xcconfig"; sourceTree = "<group>"; };
+		60CF85E6275B8A0C000C7215 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		60DC74A62704CD95004AD74B /* reclothes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = reclothes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		60DC74A92704CD95004AD74B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		60DC74AD2704CD95004AD74B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */,
 				BFFF006527566610000D6DA6 /* DetailViewController.swift */,
 				BF1DA0B52756B58100AAA5BC /* ReservationViewController.swift */,
+				60CF85E6275B8A0C000C7215 /* SearchViewController.swift */,
 			);
 			path = reclothes;
 			sourceTree = "<group>";
@@ -542,6 +545,7 @@
 				BFFF006A27567912000D6DA6 /* ProfileView.swift in Sources */,
 				BFFF006827567110000D6DA6 /* HashtagCollectionViewCell.swift in Sources */,
 				BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */,
+				60CF85E7275B8A0C000C7215 /* SearchViewController.swift in Sources */,
 				BFFF006E27569789000D6DA6 /* MainTableViewCell.swift in Sources */,
 				BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */,
 				BF1DA0BC2757549000AAA5BC /* SchedulerTableViewCell.swift in Sources */,
