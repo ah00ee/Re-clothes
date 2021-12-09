@@ -11,7 +11,7 @@ class LikesViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationController?.navigationBar.topItem?.title = "마이클로젯"
         // Do any additional setup after loading the view.
     }
     

@@ -7,9 +7,7 @@
 import UIKit
 import FirebaseDatabase
 import FirebaseStorage
-import SDWebImage
 import KakaoSDKUser
-import FirebaseStorageUI
 
 class UserViewController: UIViewController{
     var ref: DatabaseReference!
@@ -17,7 +15,6 @@ class UserViewController: UIViewController{
     var items: [String] = []
     
     @IBOutlet weak var collectionView: UICollectionView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -41,6 +38,7 @@ class UserViewController: UIViewController{
                     print(error.localizedDescription)
                 }
                 */
+                
                 // User item Data 불러오기
                 ref.child("\(String(describing: user?.id))").getData(completion:  { error, snapshot in
                     guard error == nil else {
@@ -48,8 +46,10 @@ class UserViewController: UIViewController{
                         return;
                     }
                     let value = snapshot.value as? [String: AnyObject]
-                    items = value!["itemID"] as! [String];()
-                 
+                    if value!.count > 4 {
+                        items = value!["itemID"] as! [String];()
+                    }
+    
                     collectionView.delegate = self
                     collectionView.dataSource = self
                     collectionView.reloadData()
@@ -113,10 +113,9 @@ extension UserViewController: UICollectionViewDataSource,
     }
 
     // 셀 레이아웃
-    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         let width: CGFloat = (collectionView.bounds.width - 10)/2
-        let height: CGFloat = width*1.7 + 30
+        let height: CGFloat = width*1.7
         
         return CGSize(width: width, height: height)
     }

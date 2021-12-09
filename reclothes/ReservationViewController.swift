@@ -13,6 +13,15 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
     @IBOutlet weak var calendar: FSCalendar!
     @IBOutlet weak var confirmBtn: UIButton!
     @IBOutlet weak var confirmLabel: UILabel!
+    
+    // 가격
+    @IBOutlet weak var dailyLabel: UILabel!
+    @IBOutlet weak var dailyPrice: UILabel!
+    @IBOutlet weak var cntLabel: UILabel!
+    @IBOutlet weak var cntDays: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var totalPrice: UILabel!
+    
     let dateFormatter = DateFormatter()
     
     // 선택된 날짜 중
@@ -21,6 +30,7 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        confirmLabel.textAlignment = .center
         
         calendar.delegate = self
         calendar.dataSource = self

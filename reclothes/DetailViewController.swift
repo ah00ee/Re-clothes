@@ -6,9 +6,10 @@
 //
 
 import UIKit
+import FirebaseStorage
+import FirebaseDatabase
 
 class DetailViewController: UIViewController {
-
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemTitle: UILabel!
     
@@ -18,7 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var sharerImg: UIImageView!
     @IBOutlet weak var reserveBtn: UIButton!
     
-    // description 안넣음 아직
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +30,17 @@ class DetailViewController: UIViewController {
         profileView.layer.borderWidth = 0.7
         
         reserveBtn.layer.cornerRadius = 20
+        //self.modalPresentationStyle = .fullScreen
     }
+   
+    
+    // TODO: Item 불러오기 구현
+    
+    
+    // TODO: description 추가
+    
+    
+    
     /*
     // MARK: - Navigation
 
