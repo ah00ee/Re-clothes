@@ -6,7 +6,6 @@ target 'reclothes' do
   use_frameworks!
 
   pod 'KakaoSDK'
-#  pod 'RealmSwift', '~>10' 
 
   # Add the Firebase pod for Google Analytics
   pod 'Firebase/Analytics'

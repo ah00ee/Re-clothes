@@ -449,7 +449,7 @@ PODS:
     - FirebaseAuthUI
     - FirebaseCore
     - GoogleSignIn (~> 6.0)
-  - FirebaseInstallations (8.9.0):
+  - FirebaseInstallations (8.10.0):
     - FirebaseCore (~> 8.0)
     - GoogleUtilities/Environment (~> 7.6)
     - GoogleUtilities/UserDefaults (~> 7.6)
@@ -698,7 +698,7 @@ SPEC CHECKSUMS:
   FirebaseFirestore: 15ae9648476436efed698a909e44c4737498f9b4
   FirebaseFirestoreUI: ec98193d249eaa30ed615857b1daf475fbc75248
   FirebaseGoogleAuthUI: 6981c0c3c054367f9ccd730fbcf483504deb0a68
-  FirebaseInstallations: caa7c8e0d3e2345b8829d2fa9ca1b4dfbf2fcc85
+  FirebaseInstallations: 830327b45345ffc859eaa9c17bcd5ae893fd5425
   FirebaseOAuthUI: 8dc3d0270781133b10b2666d1163cd298501f453
   FirebasePhoneAuthUI: d84be4a096ddc19f9aace4a6ebcf80fe334f466b
   FirebaseStorage: 452c98c31ccb40b819764bf3039426c4388d9939
@@ -727,6 +727,6 @@ SPEC CHECKSUMS:
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
   SDWebImage: 4dc3e42d9ec0c1028b960a33ac6b637bb432207b
 
-PODFILE CHECKSUM: 3563561203382d25711d8d18e68ee0806bd5c8cc
+PODFILE CHECKSUM: 824c626a64c9d37dab76aaf446c7553da7acf53f
 
 COCOAPODS: 1.11.2

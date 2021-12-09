@@ -14,7 +14,7 @@ class PostViewController: UIViewController {
     var ref: DatabaseReference!
     
     let imgPicker = UIImagePickerController()
-    let imgStorage = Storage.storage()
+    let storage = Storage.storage()
 
     var filePath = ""
     
@@ -58,7 +58,7 @@ class PostViewController: UIViewController {
         
         let metaData = StorageMetadata()
         metaData.contentType = "image/png"
-        imgStorage.reference().child(filePath).putData(data, metadata: metaData){
+        storage.reference().child(filePath).putData(data, metadata: metaData){
             (metaData,error) in if let error = error {
                 print(error)
             }
@@ -90,9 +90,9 @@ class PostViewController: UIViewController {
                         });
                     }
                 }
-                self.dismiss(animated: true, completion: nil)
             }
         }
+        dismiss(animated: false, completion: nil)
     }
 
     func openCamera(){ // 카메라 오픈
@@ -121,7 +121,6 @@ UINavigationControllerDelegate{
             filePath = asset.lastPathComponent
             print(filePath)
         }
-        
         dismiss(animated: true, completion: nil)
     }
 }

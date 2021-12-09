@@ -59,6 +59,4 @@ class ItemCollectionViewController: UIViewController, UICollectionViewDelegate, 
        func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
            return sectionInsets.left
        }
-    
-
 }

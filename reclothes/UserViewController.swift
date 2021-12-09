@@ -9,34 +9,51 @@ import FirebaseDatabase
 import FirebaseStorage
 import SDWebImage
 import KakaoSDKUser
+import FirebaseStorageUI
 
 class UserViewController: UIViewController{
     var ref: DatabaseReference!
+    var storageRef: StorageReference?
     var items: [String] = []
     
-    @IBOutlet weak var userName: UILabel!
-    @IBOutlet weak var userImage: UIImageView!
-    @IBOutlet weak var postView: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         navigationController?.navigationBar.topItem?.title = "마이클로젯"
-
+        //userName?.text = ""
         UserApi.shared.me(){ [self](user,error) in
             if let error = error{
                 print("error")
             }
             else{
                 ref = Database.database().reference().child("user")
-                
-                self.ref.child("\(String(describing: user?.id))").observe(.value) {snapshot in
-                    let value = snapshot.value as! [String: AnyObject]
-                    let nickname = value["nickname"] as! String
-  
-                    self.userName.text = nickname
+                /*
+                // User name 불러오기
+                self.ref.child("\(String(describing: user?.id))").observeSingleEvent(of: .value, with: {snapshot in
+                    let value = snapshot.value as? NSDictionary
+                    let nickname = value?["nickname"] as? String ?? ""
+                    
+                    //self.userName?.text = nickname
+                }){ error in
+                    print(error.localizedDescription)
                 }
+                */
+                // User item Data 불러오기
+                ref.child("\(String(describing: user?.id))").getData(completion:  { error, snapshot in
+                    guard error == nil else {
+                        print(error!.localizedDescription)
+                        return;
+                    }
+                    let value = snapshot.value as? [String: AnyObject]
+                    items = value!["itemID"] as! [String];()
+                 
+                    collectionView.delegate = self
+                    collectionView.dataSource = self
+                    collectionView.reloadData()
+                });
             }
         }
     }
@@ -56,61 +73,51 @@ extension UserViewController: UICollectionViewDataSource,
                               UICollectionViewDelegate, UICollectionViewDelegateFlowLayout{
     // 셀 개수
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        UserApi.shared.me(){ [self](user,error) in
-            if let error = error{
-                print("error")
-            }
-            else{
-                ref.child("user/\(String(describing: user?.id))").getData(completion:  { error, snapshot in
-                    guard error == nil else {
-                        print(error!.localizedDescription)
-                        return;
-                    }
-                    let value = snapshot.value as? [String: AnyObject]
-                    items = value!["itemID"] as! [String];()
-                });
-            }
-        }
-        print("nums")
-        //items.count)
         return items.count
     }
     
-    // 셀 지정
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let imgStorage = Storage.storage()
-        var imgPath: String = ""
-        ref.child("item/\(items[indexPath.row])").getData(completion:  { error, snapshot in
+        var imgPath: String = "gs://re-clothes.appspot.com/"
+        let storage = Storage.storage()
+        
+        let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionCell", for: indexPath) as! PostCollectionViewCell
+
+        ref = Database.database().reference().child("item")
+        ref.child("\(items[indexPath.row])").getData(completion:  { error, snapshot in
             guard error == nil else {
                 print(error!.localizedDescription)
                 return;
             }
             let value = snapshot.value as! [String: AnyObject]
-            imgPath = value["imgPath"] as! String
+            let path = value["imgPath"] as! String
+            imgPath.append(path)
+            
+            // storage에서 이미지 불러오기
+            storage.reference(forURL: imgPath).downloadURL{ url, error in
+                if let error = error {
+                    print(error)
+                }
+                else{
+                    let data = NSData(contentsOf: url!)
+                    let image = UIImage(data: data! as Data)
+                    postCell.postImage.image = image
+                }
+            }
+            
+            let title = value["title"] as! String
+            if let label = postCell.postLabel {
+                postCell.postLabel.text = title
+            }
         });
-        
-        let postCell = collectionView.dequeueReusableCell(withReuseIdentifier: "PostCollectionViewCell", for: indexPath) as! PostCollectionViewCell
-        print(imgPath)
-        imgStorage.reference(forURL: "gs://re-clothes.appspot.com/\(imgPath)").downloadURL(completion: { url, error in
-            if error == nil{
-                print(error)
-            }
-            else{
-                let data = NSData(contentsOf: url!)
-                postCell.postImage.image = UIImage(data: data! as Data)
-            }
-        })
-        print("great")
         return postCell
     }
-    
+
     // 셀 레이아웃
-    /*
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
         let width: CGFloat = (collectionView.bounds.width - 10)/2
         let height: CGFloat = width*1.7 + 30
         
         return CGSize(width: width, height: height)
     }
-     */
 }
