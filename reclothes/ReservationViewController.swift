@@ -23,6 +23,7 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
     @IBOutlet weak var totalPrice: UILabel!
     
     let dateFormatter = DateFormatter()
+    let today = Date()
     
     // 선택된 날짜 중
     var minDate : Date? = nil
@@ -77,6 +78,8 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
             minDate = date
             maxDate = date
             confirmLabel.text = dateFormatter.string(from: date) + " 예약"
+            
+            confirmBtn.isEnabled = true
         } else if calendar.selectedDates.count == 2 {
             if minDate?.compare(date) == .orderedDescending{
                 minDate = date
@@ -91,11 +94,17 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
             }
             
             confirmLabel.text = dateFormatter.string(from: minDate!) + " ~ " + dateFormatter.string(from: maxDate!) + " 예약"
+            
+            confirmBtn.isEnabled = true
         }else{
             clear()
+            confirmLabel.text = "날짜를 선택해주세요"
         }
         
-        confirmBtn.isEnabled = true
+        if date < today {
+            confirmLabel.text = "이전 날짜는 선택할 수 없습니다"
+            clear()
+        }
     }
     
     //선택해제 불가능하게
@@ -121,7 +130,6 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
         }
         minDate = nil
         maxDate = nil
-        confirmLabel.text = "날짜를 선택해주세요"
         confirmBtn.isEnabled = false
     }
 }
