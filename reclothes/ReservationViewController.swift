@@ -46,7 +46,6 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
         
         calendar.appearance.todayColor = #colorLiteral(red: 0.9529411793, green: 0.6862745285, blue: 0.1333333403, alpha: 1)
         calendar.appearance.selectionColor = #colorLiteral(red: 0.7678088546, green: 0, blue: 0, alpha: 1)
-        confirmBtn.layer.cornerRadius = 20
         
         calendar.calendarWeekdayView.weekdayLabels[6].textColor = .blue
         calendar.calendarWeekdayView.weekdayLabels[0].textColor = .red
@@ -102,7 +101,7 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
         }
         
         if date < today {
-            confirmLabel.text = "이전 날짜는 선택할 수 없습니다"
+            confirmLabel.text = "당일과 이전 날짜는 선택할 수 없습니다"
             clear()
         }
     }
