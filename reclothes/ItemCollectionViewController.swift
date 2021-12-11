@@ -12,7 +12,7 @@ class ItemCollectionViewController: UIViewController, UICollectionViewDelegate, 
     
     var tmpItemName = ["구두", "아우터", "가방", "후드", "악세사리", "구두", "아우터", "가방", "후드", "악세사리", "구두", "아우터", "가방", "후드", "악세사리"]
     var tmpItemPrice = ["2000원", "4400원", "2300원", "3000원", "30000원", "2000원", "4400원", "2300원", "3000원", "30000원", "2000원", "4400원", "2300원", "3000원", "30000원"]
-    let sectionInsets = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    let sectionInsets = UIEdgeInsets(top: 2, left: 2, bottom: 2, right: 2)
 
     @IBOutlet weak var itemCollectionView: UICollectionView!
     
@@ -41,22 +41,23 @@ class ItemCollectionViewController: UIViewController, UICollectionViewDelegate, 
         
         return cell
     }
+
+    // 코드가 안먹고 스토리보드에서 커스텀된 것 같은데 나중에 테스팅해보고 수정
+
+    // 아래는 셀들의 사이즈, 간격을 조정해주는 코드
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
+        
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 2
+    }
     
+    // 이거는 인스타처럼 셀이 세개씩 보이게 해주는 코드
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-           let width = collectionView.frame.width
-           let itemsPerRow: CGFloat = 3
-           let widthPadding = sectionInsets.left * (itemsPerRow + 1)
-           let cellWidth = (width - widthPadding) / itemsPerRow
-           
-           return CGSize(width: cellWidth, height: 220)
-           
-       }
-       
-       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-           return sectionInsets
-       }
-       
-       func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-           return sectionInsets.left
-       }
+        print("enter here")
+        let width = (view.frame.width - 4) / 3
+            
+        return CGSize(width: width, height: 160)
+    }
 }
