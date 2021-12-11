@@ -78,7 +78,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Bat-e7-eSb">
-                                <rect key="frame" x="0.0" y="108" width="390" height="628"/>
+                                <rect key="frame" x="0.0" y="108" width="390" height="736"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <label key="tableFooterView" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2021, Re-clothes Co.,Ltd" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Rat-U1-Pgk">
                                     <rect key="frame" x="0.0" y="328.33333206176758" width="390" height="44"/>
@@ -122,7 +122,7 @@
                                                                 <autoresizingMask key="autoresizingMask"/>
                                                                 <subviews>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="moon.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="CHA-3s-JZh">
-                                                                        <rect key="frame" x="0.0" y="0.99999999999999289" width="116" height="126.33333333333331"/>
+                                                                        <rect key="frame" x="0.0" y="0.99999999999999289" width="116" height="126.33333333333333"/>
                                                                         <constraints>
                                                                             <constraint firstAttribute="width" constant="128" id="3t4-aQ-WNd"/>
                                                                             <constraint firstAttribute="height" constant="128" id="pZ0-G9-zjM"/>
@@ -178,7 +178,7 @@
                                 </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ysz-sP-zTZ">
-                                <rect key="frame" x="195" y="746" width="0.0" height="0.0"/>
+                                <rect key="frame" x="195" y="844" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -187,9 +187,9 @@
                         <viewLayoutGuide key="safeArea" id="nZj-G9-tjJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Bat-e7-eSb" firstAttribute="centerY" secondItem="zIX-os-yVk" secondAttribute="centerY" id="7Cc-5J-m0Y"/>
+                            <constraint firstItem="Bat-e7-eSb" firstAttribute="bottom" secondItem="Ysz-sP-zTZ" secondAttribute="bottom" id="4ig-Me-5i0"/>
                             <constraint firstItem="Ysz-sP-zTZ" firstAttribute="centerX" secondItem="zIX-os-yVk" secondAttribute="centerX" id="8tF-MM-C9N"/>
-                            <constraint firstItem="Ysz-sP-zTZ" firstAttribute="top" secondItem="Bat-e7-eSb" secondAttribute="bottom" constant="10" id="Yxs-wb-XrA"/>
+                            <constraint firstAttribute="bottom" secondItem="Ysz-sP-zTZ" secondAttribute="bottom" id="ZZC-UP-pgx"/>
                             <constraint firstItem="Bat-e7-eSb" firstAttribute="top" secondItem="nZj-G9-tjJ" secondAttribute="top" constant="20" id="fbz-Pc-Dhp"/>
                             <constraint firstItem="nZj-G9-tjJ" firstAttribute="trailing" secondItem="Bat-e7-eSb" secondAttribute="trailing" id="h5V-Fz-zUX"/>
                             <constraint firstItem="Bat-e7-eSb" firstAttribute="centerX" secondItem="zIX-os-yVk" secondAttribute="centerX" id="p5C-pf-dFI"/>
@@ -377,17 +377,17 @@
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="I8Y-Ov-QG3" customClass="DetailViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZRi-AV-ChK">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="790"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mL5-4S-IUC">
-                                <rect key="frame" x="20" y="62" width="350" height="350"/>
+                                <rect key="frame" x="20" y="94" width="350" height="350"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="mL5-4S-IUC" secondAttribute="height" multiplier="1:1" id="Afy-n6-MRH"/>
                                 </constraints>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="i01-9k-WNF">
-                                <rect key="frame" x="20" y="414" width="350" height="35"/>
+                                <rect key="frame" x="20" y="446" width="350" height="35"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="35" id="R5J-GY-YhW"/>
@@ -428,13 +428,13 @@
                                 </cells>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GCz-4B-G8M">
-                                <rect key="frame" x="20.000000000000007" y="459" width="98.666666666666686" height="30"/>
+                                <rect key="frame" x="20.000000000000007" y="491" width="98.666666666666686" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w53-9G-SfP" customClass="ProfileView" customModule="reclothes" customModuleProvider="target">
-                                <rect key="frame" x="20" y="499" width="350" height="120"/>
+                                <rect key="frame" x="20" y="531" width="350" height="120"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3l5-N0-hap">
                                         <rect key="frame" x="0.0" y="10" width="100" height="100"/>
@@ -476,7 +476,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfP-rJ-u8F">
-                                <rect key="frame" x="20" y="715" width="350" height="50"/>
+                                <rect key="frame" x="20" y="769" width="350" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="bka-A3-myb"/>
                                 </constraints>
@@ -1414,7 +1414,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="Axg-W1-zWz"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qjx-hG-jDx">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="390" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1474,7 +1474,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zPv-AX-FKc"/>
+        <segue reference="Fvb-0M-i4F"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="calendar.badge.clock" catalog="system" width="128" height="108"/>
