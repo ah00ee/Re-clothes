@@ -179,32 +179,16 @@
 		60DC74A82704CD95004AD74B /* reclothes */ = {
 			isa = PBXGroup;
 			children = (
+				BF413234276630BC006337D5 /* ViewController */,
+				BF413233276630B9006337D5 /* View */,
+				BF413231276630AB006337D5 /* Model */,
 				7B8D80D8274AA5C1006C8DFC /* GoogleService-Info.plist */,
 				7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */,
 				60DC74A92704CD95004AD74B /* AppDelegate.swift */,
-				60DC74AD2704CD95004AD74B /* LoginViewController.swift */,
 				60DC74AF2704CD95004AD74B /* Main.storyboard */,
-				BF1DA0B927574F3C00AAA5BC /* SchedulerViewController.swift */,
-				BF1DA0BB2757549000AAA5BC /* SchedulerTableViewCell.swift */,
-				BF1DA0B7275723A600AAA5BC /* ItemCollectionViewController.swift */,
-				BFFF006927567912000D6DA6 /* ProfileView.swift */,
-				BFFF006727567110000D6DA6 /* HashtagCollectionViewCell.swift */,
-				7B8552952755F7E40020457D /* LikesViewController.swift */,
-				7B7912F72755CD000067192A /* PopUpViewController.swift */,
-				BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */,
-				BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */,
-				BF7022452722E66A00EAA2C4 /* MainViewController.swift */,
-				BFFF006D27569789000D6DA6 /* MainTableViewCell.swift */,
-				BFFF006F27569855000D6DA6 /* ItemCollectionViewCell.swift */,
-				BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */,
-				7B2F12C22758FA3500C5D6DC /* PostCollectionViewCell.swift */,
 				60DC74B22704CD96004AD74B /* Assets.xcassets */,
 				60DC74B42704CD96004AD74B /* LaunchScreen.storyboard */,
 				60DC74B72704CD96004AD74B /* Info.plist */,
-				BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */,
-				BFFF006527566610000D6DA6 /* DetailViewController.swift */,
-				BF1DA0B52756B58100AAA5BC /* ReservationViewController.swift */,
-				60CF85E6275B8A0C000C7215 /* SearchViewController.swift */,
 			);
 			path = reclothes;
 			sourceTree = "<group>";
@@ -219,6 +203,46 @@
 				BF7022372722DA4A00EAA2C4 /* reclothes_logo.jpeg */,
 			);
 			path = image;
+			sourceTree = "<group>";
+		};
+		BF413231276630AB006337D5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF413233276630B9006337D5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7B2F12C22758FA3500C5D6DC /* PostCollectionViewCell.swift */,
+				BFFF006D27569789000D6DA6 /* MainTableViewCell.swift */,
+				BFFF006927567912000D6DA6 /* ProfileView.swift */,
+				BFFF006F27569855000D6DA6 /* ItemCollectionViewCell.swift */,
+				BFFF006727567110000D6DA6 /* HashtagCollectionViewCell.swift */,
+				BF48C1D1274A2480008E58E8 /* CategoryCollectionViewCell.swift */,
+				BF1DA0BB2757549000AAA5BC /* SchedulerTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF413234276630BC006337D5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				BF1DA0B7275723A600AAA5BC /* ItemCollectionViewController.swift */,
+				7B8552952755F7E40020457D /* LikesViewController.swift */,
+				7B7912F72755CD000067192A /* PopUpViewController.swift */,
+				BF48C1D5274A2975008E58E8 /* CategoryViewController.swift */,
+				BFB03F7A272FD1E400C9F2D0 /* PostViewController.swift */,
+				BF7022452722E66A00EAA2C4 /* MainViewController.swift */,
+				BF1DA0B927574F3C00AAA5BC /* SchedulerViewController.swift */,
+				BF1DA0B52756B58100AAA5BC /* ReservationViewController.swift */,
+				BFFF006527566610000D6DA6 /* DetailViewController.swift */,
+				60CF85E6275B8A0C000C7215 /* SearchViewController.swift */,
+				60DC74AD2704CD95004AD74B /* LoginViewController.swift */,
+				BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		BF705592274DE4A000D21D88 /* categoryImgs */ = {
