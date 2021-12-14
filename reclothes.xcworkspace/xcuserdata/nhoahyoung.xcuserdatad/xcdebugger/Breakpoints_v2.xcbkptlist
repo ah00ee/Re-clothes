@@ -100,5 +100,113 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9C203301-6493-4006-BF37-2912FE0A77F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "reclothes/ViewController/UserViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "UserViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "9C203301-6493-4006-BF37-2912FE0A77F2 - 11623f2b8f84f061"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reclothes.UserViewController.items.getter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "reclothes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nhoahyoung/Desktop/Re-clothes/reclothes/ViewController/UserViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "88">
+               </Location>
+               <Location
+                  uuid = "9C203301-6493-4006-BF37-2912FE0A77F2 - 86b4d5e47ef7feed"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reclothes.UserViewController.items.setter : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "reclothes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nhoahyoung/Desktop/Re-clothes/reclothes/ViewController/UserViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "108">
+               </Location>
+               <Location
+                  uuid = "9C203301-6493-4006-BF37-2912FE0A77F2 - 57ecfec8df453f33"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reclothes.UserViewController.items.modify : Swift.Array&lt;Swift.String&gt;"
+                  moduleName = "reclothes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nhoahyoung/Desktop/Re-clothes/reclothes/ViewController/UserViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "9C203301-6493-4006-BF37-2912FE0A77F2 - 8425d6feaad1d547"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reclothes.UserViewController.items.modify : Swift.Array&lt;Swift.String&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "reclothes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nhoahyoung/Desktop/Re-clothes/reclothes/ViewController/UserViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  uuid = "9C203301-6493-4006-BF37-2912FE0A77F2 - 315512d26fc68427"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reclothes.UserViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; reclothes.UserViewController"
+                  moduleName = "reclothes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nhoahyoung/Desktop/Re-clothes/reclothes/ViewController/UserViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "172">
+               </Location>
+               <Location
+                  uuid = "9C203301-6493-4006-BF37-2912FE0A77F2 - a4d2f7a8f162dbe8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "reclothes.UserViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;reclothes.UserViewController&gt;"
+                  moduleName = "reclothes"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nhoahyoung/Desktop/Re-clothes/reclothes/ViewController/UserViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "15"
+                  endingLineNumber = "15"
+                  offsetFromSymbolStart = "148">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

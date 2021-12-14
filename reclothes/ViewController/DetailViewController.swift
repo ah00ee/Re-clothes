@@ -20,23 +20,53 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var reserveBtn: UIButton!
     
     var ref: DatabaseReference!
+    var storage: StorageReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+ 
         itemImage.layer.borderColor = UIColor.lightGray.cgColor
         itemImage.layer.borderWidth = 0.7
         profileView.layer.borderColor = UIColor.lightGray.cgColor
         profileView.layer.borderWidth = 0.7
         
         reserveBtn.layer.cornerRadius = 20
-        //self.modalPresentationStyle = .fullScreen
     }
    
-    
-    // TODO: Item 불러오기 구현
-    
-    
+    // Item 불러오기
+    func receiveItem(_ item: String){
+        var imgPath: String = "gs://re-clothes.appspot.com/"
+        let storage = Storage.storage()
+
+        ref = Database.database().reference().child("item")
+        ref.child(item).getData(completion:  { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return;
+            }
+            let value = snapshot.value as! [String: AnyObject]
+            let path = value["imgPath"] as! String
+            imgPath.append(path)
+            
+            // storage에서 이미지 불러오기
+            storage.reference(forURL: imgPath).downloadURL{ url, error in
+                if let error = error {
+                    print(error)
+                }
+                else{
+                    let data = NSData(contentsOf: url!)
+                    let image = UIImage(data: data! as Data)
+                    self.itemImage.image = image
+                }
+            }
+            
+            let title = value["title"] as! String
+            if let label = self.itemTitle {
+                label.text = title
+            }
+        });
+    }
+
     // TODO: description 추가
     
     
@@ -50,5 +80,4 @@ class DetailViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
 }

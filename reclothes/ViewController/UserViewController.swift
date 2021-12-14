@@ -13,7 +13,7 @@ class UserViewController: UIViewController{
     var ref: DatabaseReference!
     var storageRef: StorageReference?
     var items: [String] = []
-    
+ 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,16 +57,22 @@ class UserViewController: UIViewController{
             }
         }
     }
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "showdetail"{
+            if let target = segue.destination as? UINavigationController, let vc = target.topViewController as? DetailViewController {
+                let cell = sender as! UICollectionViewCell
+                let indexPath = self.collectionView.indexPath(for: cell)
+                
+                vc.receiveItem(items[((indexPath as NSIndexPath?)?.row)!])
+            }
+        }
     }
-    */
 }
 
 extension UserViewController: UICollectionViewDataSource,
@@ -109,6 +115,7 @@ extension UserViewController: UICollectionViewDataSource,
                 postCell.postLabel.text = title
             }
         });
+        
         return postCell
     }
 
