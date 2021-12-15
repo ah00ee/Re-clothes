@@ -17,6 +17,7 @@
 		7B7912F82755CD000067192A /* PopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7912F72755CD000067192A /* PopUpViewController.swift */; };
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
 		7B8552962755F7E40020457D /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8552952755F7E40020457D /* LikesViewController.swift */; };
+		7B8A8618276A9C24001FFBE7 /* LikesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A8617276A9C24001FFBE7 /* LikesTableViewCell.swift */; };
 		7B9F5C42272B123300E876BA /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
 		7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */; };
 		BF1DA0B62756B58100AAA5BC /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA0B52756B58100AAA5BC /* ReservationViewController.swift */; };
@@ -81,6 +82,7 @@
 		7B7912F72755CD000067192A /* PopUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpViewController.swift; sourceTree = "<group>"; };
 		7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7B8552952755F7E40020457D /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
+		7B8A8617276A9C24001FFBE7 /* LikesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesTableViewCell.swift; sourceTree = "<group>"; };
 		7B8D80D8274AA5C1006C8DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_signup_medium_narrow.png; sourceTree = "<group>"; };
 		A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -215,6 +217,7 @@
 		BF413233276630B9006337D5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7B8A8617276A9C24001FFBE7 /* LikesTableViewCell.swift */,
 				7B2F12C22758FA3500C5D6DC /* PostCollectionViewCell.swift */,
 				BFFF006D27569789000D6DA6 /* MainTableViewCell.swift */,
 				BFFF006927567912000D6DA6 /* ProfileView.swift */,
@@ -570,6 +573,7 @@
 				BFFF006827567110000D6DA6 /* HashtagCollectionViewCell.swift in Sources */,
 				BF48C1D2274A2480008E58E8 /* CategoryCollectionViewCell.swift in Sources */,
 				60CF85E7275B8A0C000C7215 /* SearchViewController.swift in Sources */,
+				7B8A8618276A9C24001FFBE7 /* LikesTableViewCell.swift in Sources */,
 				BFFF006E27569789000D6DA6 /* MainTableViewCell.swift in Sources */,
 				BF7022462722E66A00EAA2C4 /* MainViewController.swift in Sources */,
 				BF1DA0BC2757549000AAA5BC /* SchedulerTableViewCell.swift in Sources */,

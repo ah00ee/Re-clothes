@@ -12,6 +12,7 @@ import FirebaseDatabase
 class DetailViewController: UIViewController {
     @IBOutlet weak var itemImage: UIImageView!
     @IBOutlet weak var itemTitle: UILabel!
+    @IBOutlet weak var itemPrice: UILabel!
     
     @IBOutlet weak var hashtagCollection: UICollectionView!
     
@@ -21,6 +22,7 @@ class DetailViewController: UIViewController {
     
     var ref: DatabaseReference!
     var storage: StorageReference!
+    var receivedItem = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +37,7 @@ class DetailViewController: UIViewController {
    
     // Item 불러오기
     func receiveItem(_ item: String){
+        receivedItem = item
         var imgPath: String = "gs://re-clothes.appspot.com/"
         let storage = Storage.storage()
 
@@ -59,11 +62,11 @@ class DetailViewController: UIViewController {
                     self.itemImage.image = image
                 }
             }
-            
             let title = value["title"] as! String
-            if let label = self.itemTitle {
-                label.text = title
-            }
+            let price = value["price"] as! Int
+            
+            self.itemTitle.text = title
+            self.itemPrice.text = String(price) + "원/일"
         });
     }
 
@@ -71,13 +74,16 @@ class DetailViewController: UIViewController {
     
     
     
-    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "reserveItem"{
+            if let vc = segue.destination as? ReservationViewController {
+                vc.receiveItemFromDVC(receivedItem)
+            }
+        }
     }
-    */
 }

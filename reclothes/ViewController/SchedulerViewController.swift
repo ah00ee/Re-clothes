@@ -7,13 +7,19 @@
 
 import UIKit
 import FSCalendar
+import FirebaseDatabase
+import KakaoSDKUser
 
 class SchedulerViewController: UIViewController{
+    var ref: DatabaseReference!
+    var schedules: [String] = []
     
     @IBOutlet weak var scheduler: FSCalendar!
     @IBOutlet weak var scheduleList: UITableView!
     var didSelectDate = ""
     let dateFormatter = DateFormatter()
+    let today = Date()
+    var itemTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +35,7 @@ class SchedulerViewController: UIViewController{
         scheduler.appearance.borderRadius = 0
         // 달력의 요일 글자 색깔
         scheduler.appearance.weekdayTextColor = .black
-//         달력의 맨 위의 년도, 월의 색깔
+        // 달력의 맨 위의 년도, 월의 색깔
         scheduler.appearance.headerTitleColor = .black
         
         scheduler.appearance.todayColor = #colorLiteral(red: 0.857311964, green: 0.8762198687, blue: 0.7865865827, alpha: 0.48)
@@ -41,6 +47,31 @@ class SchedulerViewController: UIViewController{
         
         // 년월에 흐릿하게 보이는 애들 없애기
         scheduler.appearance.headerMinimumDissolvedAlpha = 0
+        
+        UserApi.shared.me(){ [self](user,error) in
+            if let error = error{
+                print("error")
+            }
+            else{
+                ref = Database.database().reference().child("user")
+                
+                // User reservation Data 불러오기
+                ref.child("\(String(describing: user?.id))").getData(completion:  { error, snapshot in
+                    guard error == nil else {
+                        print(error!.localizedDescription)
+                        return;
+                    }
+                    let value = snapshot.value as? [String: AnyObject]
+
+                    if value?.keys.contains("reservationID") == true {
+                        schedules = value!["reservationID"] as! [String];()
+                    }
+
+                    scheduleList.delegate = self
+                    scheduleList.dataSource = self
+                });
+            }
+        }
     }
 }
 
@@ -51,24 +82,61 @@ extension SchedulerViewController: FSCalendarDelegate, FSCalendarDataSource{
             self.scheduleList.reloadData()
         }
     }
-    
 }
 
 extension SchedulerViewController: UITableViewDelegate, UITableViewDataSource{
-    
+    /*
     // 일정 다중 선택 시 일정을 모아서 보여줄때 필요함
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        <#code#>
-//    }
+    func numberOfSections(in tableView: UITableView) -> Int {
+        <#code#>
+    }
+    */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 20 //temp item
+        return schedules.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = UITableViewCell.dequeueReusableCell(withIdentifier: <#T##String#>)
         let cell = scheduleList.dequeueReusableCell(withIdentifier: "schedulerTableViewCell", for:indexPath) as! SchedulerTableViewCell
-        cell.contents.text = "일정이 쭈르륵 나오면 됩니다"
+
+        ref = Database.database().reference()
+        ref.child("reservation").child("\(schedules[indexPath.row])").getData(completion:  { [self] error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return;
+            }
+            let value = snapshot.value as! [String: AnyObject]
+            let itemID = value["itemID"] as! String
+    
+            ref.child("item").child(itemID).getData(completion: { error, snapshot in
+                guard error == nil else{
+                    print(error?.localizedDescription)
+                    return;
+                }
+                let item_value = snapshot.value as! [String: AnyObject]
+                itemTitle = item_value["title"] as! String
+            });
+            let lendDate = dateFormatter.date(from: value["lendDate"] as! String)
+            let returnDate = dateFormatter.date(from: value["returnDate"] as! String)
+            let selectedDate = scheduler.selectedDate!
+            
+            if selectedDate >= today && selectedDate <= returnDate!{
+                if lendDate! > selectedDate{
+                    let days = String(Int((lendDate?.timeIntervalSince(selectedDate))!/86400))
+                    cell.contents.text = "[빌리기 - " + "\(itemTitle)] " + days + "일 전"
+                }
+                else if lendDate! <= selectedDate && selectedDate < returnDate!{
+                    let days = String(Int((returnDate?.timeIntervalSince(selectedDate))!/86400))
+                    cell.contents.text = "[반납하기 - " + "\(itemTitle)] " + days + "일 전"
+                }
+                else{ // 반납일
+                    cell.contents.text = "*** [반납일 - " + "\(itemTitle)] ***"
+                }
+            }
+            else{
+                cell.contents.text = ""
+            }
+        });
         
         return cell
     }
@@ -76,5 +144,4 @@ extension SchedulerViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return didSelectDate
     }
-    
 }

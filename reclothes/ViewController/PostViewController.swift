@@ -63,8 +63,7 @@ class PostViewController: UIViewController {
                 print(error)
             }
             else{
-                print("업로드 성공")
-                
+                // 업로드 성공
                 // itemDB에 item 추가
                 let postID = self.ref.child("item").childByAutoId()
                 postID.setValue(["title": self.itemTitle.text!, "price": Int(self.itemPrice.text!)!, "imgPath": self.filePath])

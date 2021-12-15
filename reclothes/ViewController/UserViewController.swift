@@ -46,7 +46,7 @@ class UserViewController: UIViewController{
                         return;
                     }
                     let value = snapshot.value as? [String: AnyObject]
-                    if value!.count > 4 {
+                    if value?.keys.contains("itemID") == true {
                         items = value!["itemID"] as! [String];()
                     }
     
@@ -56,6 +56,10 @@ class UserViewController: UIViewController{
                 });
             }
         }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        collectionView.reloadData()
     }
     
     // MARK: - Navigation

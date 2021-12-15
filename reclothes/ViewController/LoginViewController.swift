@@ -64,6 +64,7 @@ class LoginViewController: UIViewController {
                 }
                 let bday = user?.kakaoAccount?.birthday ?? ""
                 var itemID = [String]()
+                var reservationID = [String]()
                 
                 // id: user?.kakaoAccount?.email, pw: user?.id
                 Auth.auth().createUser(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))") { fuser, error in
@@ -74,7 +75,7 @@ class LoginViewController: UIViewController {
                         present(mainVC, animated: true, completion: nil)
                     } else {
                         ref = Database.database().reference().child("user")
-                        self.ref.child("\(String(describing: user?.id))").setValue(["nickname": nickname, "email": email, "gender": gender, "bday": bday, "itemID": itemID])
+                        self.ref.child("\(String(describing: user?.id))").setValue(["nickname": nickname, "email": email, "gender": gender, "bday": bday, "itemID": itemID, "reservationID": reservationID])
                         print("회원가입이 완료되었습니다.")
                         present(mainVC, animated: true, completion: nil)
                         mainVC.present(popupVC, animated: true, completion: nil)
