@@ -59,15 +59,6 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
         // 년월에 흐릿하게 보이는 애들 없애기
         calendar.appearance.headerMinimumDissolvedAlpha = 0
         
-        UserApi.shared.me(){ [self](user,error) in
-            if let error = error{
-                print("error")
-            }
-            else{
-                uid = (user?.id)!
-            }
-        }
-        
         ref = Database.database().reference()
         ref.child("item/\(itemID)").getData(completion:  { [self] error, snapshot in
             guard error == nil else {
@@ -94,20 +85,28 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
         let reserveID = self.ref.child("reservation").childByAutoId()
 
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        reserveID.setValue(["lendDate": dateFormatter.string(from: minDate!), "returnDate": dateFormatter.string(from: maxDate!), "userID": uid, "itemID": itemID, "totalPrice": totalPrice.text])
-        ref.child("user/\(String(describing: uid))").getData(completion:  { [self] error, snapshot in
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return;
+        UserApi.shared.me(){ [self](user,error) in
+            if let error = error{
+                print("error")
             }
-            let value = snapshot.value as! [String: AnyObject]
-            var schedules = [String]()
-            if value["reservationID"] != nil{
-                schedules = value["reservationID"] as! [String]
+            else{
+                reserveID.setValue(["lendDate": dateFormatter.string(from: minDate!), "returnDate": dateFormatter.string(from: maxDate!), "userID": user?.id, "itemID": itemID, "totalPrice": totalPrice.text])
+
+                ref.child("user/\(user?.id)").getData(completion:  { error, snapshot in
+                    guard error == nil else {
+                        print(error!.localizedDescription)
+                        return;
+                    }
+                    let value = snapshot.value as! [String: AnyObject]
+                    var schedules = [String]()
+                    if value["reservationID"] != nil{
+                        schedules = value["reservationID"] as! [String]
+                    }
+                    schedules.append(reserveID.key!)
+                    self.ref.child("user/\(user?.id)/reservationID").setValue(schedules)
+                });
             }
-            schedules.append(reserveID.key!)
-            self.ref.child("user/\(String(describing: uid))/reservationID").setValue(schedules)
-        });
+        }
       
         self.dismiss(animated: true)
     }
@@ -153,8 +152,8 @@ class ReservationViewController: UIViewController, FSCalendarDelegate, FSCalenda
             clear()
             confirmLabel.text = "날짜를 선택해주세요"
         }
-        cntDays.text = String(calendar.selectedDates.count) + "일"
-        totalPrice.text = String(tmpPrice*calendar.selectedDates.count) + "원"
+        cntDays.text = String(calendar.selectedDates.count-1) + "일"
+        totalPrice.text = String(tmpPrice*(calendar.selectedDates.count-1)) + "원"
         
         if date < today {
             confirmLabel.text = "당일과 이전 날짜는 선택할 수 없습니다"

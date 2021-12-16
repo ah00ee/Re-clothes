@@ -14,6 +14,8 @@ class UserViewController: UIViewController{
     var storageRef: StorageReference?
     var items: [String] = []
  
+    let sectionInsets = UIEdgeInsets(top: 10, left: 20, bottom: 10, right: 20)
+    
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,6 +120,9 @@ extension UserViewController: UICollectionViewDataSource,
             if let label = postCell.postLabel {
                 postCell.postLabel.text = title
             }
+            
+            let price = value["price"] as! Int
+            postCell.postPrice.text = String(price) + "원/일"
         });
         
         return postCell
@@ -125,9 +130,26 @@ extension UserViewController: UICollectionViewDataSource,
 
     // 셀 레이아웃
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout:UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize{
-        let width: CGFloat = (collectionView.bounds.width - 10)/2
-        let height: CGFloat = width*1.7
         
-        return CGSize(width: width, height: height)
+        let width = collectionView.frame.width
+        let height = collectionView.frame.height
+        let itemsPerRow: CGFloat = 2
+        let widthPadding = sectionInsets.left * (itemsPerRow + 1)
+        let itemsPerColumn: CGFloat = 3
+        let heightPadding = sectionInsets.top * (itemsPerColumn + 1)
+        let cellWidth = (width - widthPadding) / itemsPerRow
+        let cellHeight = (height - heightPadding) / itemsPerColumn
+                
+        return CGSize(width: cellWidth, height: cellHeight)
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return sectionInsets
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return sectionInsets.left
+    }
+    
+
 }
