@@ -9,8 +9,10 @@ import UIKit
 
 class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    var tmpItemName = ["구두", "아우터", "가방", "후드", "악세사리"]
-    var tmpItemPrice = ["2000원", "4400원", "2300원", "3000원", "30000원"]
+    var row = 0
+    var imgName = ["top01", "outer01", "etc01", "pants01", "dress14", "top04", "outer06", "etc04", "pants04", "dress02", "top09", "outer04", "etc07", "pants06", "dress07"]
+    var tmpItemName = ["가디건", "Military 패딩(blue)", "Saint Laurent cross", "부츠컷 청바지", "롱 스커트", "리본 스트라이프탑", "베이지 무스탕", "어그부츠", "골덴팬츠", "수트", "니트", "자켓", "써지컬 팬던트", "숏팬츠", "원피스"]
+    var tmpItemPrice = ["2000원", "4400원", "2300원", "3000원", "30000원", "2000원", "4400원", "2300원", "3000원", "30000원", "2000원", "4400원", "2300원", "3000원", "30000원"]
 
     @IBOutlet weak var labelWithHashtag: UILabel!
     @IBOutlet weak var mainCollectionView: UICollectionView!
@@ -23,7 +25,7 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 15
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -32,8 +34,7 @@ class MainTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollection
         cell.layer.borderWidth = 0.7
         cell.layer.borderColor = UIColor.lightGray.cgColor
         
-        
-        cell.itemImage.image = nil
+        cell.itemImage.image = UIImage(named: imgName[indexPath.row])
         cell.itemTitle.text = tmpItemName[indexPath.row]
         cell.itemPrice.text = tmpItemPrice[indexPath.row]
         cell.itemPrice.text! += "(1일기준)"
