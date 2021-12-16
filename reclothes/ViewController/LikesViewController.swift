@@ -15,6 +15,8 @@ class LikesViewController: UIViewController, UITableViewDataSource, UITableViewD
     let contents: [String] = ["파자마", "원피스"]
     let memo: [String] = ["5000원", "7000원"]
     
+    var temp: UIImage?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,10 @@ class LikesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "likesCell", for: indexPath) as! LikesTableViewCell
         cell.itemTitle.text = self.contents[indexPath.row]
         cell.itemPrice.text = self.memo[indexPath.row]
+        
+        temp = UIImage(named: "image/sampleImage/top1.png")
+        cell.itemImage.image = temp;
+        
         return cell
     }
     
