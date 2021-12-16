@@ -19,7 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var sharerImg: UIImageView!
     @IBOutlet weak var reserveBtn: UIButton!
-    
+
     var ref: DatabaseReference!
     var storage: StorageReference!
     var receivedItem = ""
@@ -68,6 +68,17 @@ class DetailViewController: UIViewController {
             self.itemTitle.text = title
             self.itemPrice.text = String(price) + "원/일"
         });
+    }
+    
+    func receiveItemData(_ img: String, _ title: String, _ price: String){
+        /*
+         
+         Error ***  itemImage 가 Nil
+         
+        self.itemImage.image = UIImage(named: img)
+        self.itemTitle.text = title
+        self.itemPrice.text = price
+         */
     }
 
     // TODO: description 추가
