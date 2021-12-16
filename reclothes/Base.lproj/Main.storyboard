@@ -1096,6 +1096,9 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Re-clothes" id="p8Y-xY-gEP"/>
+                    <connections>
+                        <segue destination="TYM-rg-Vfl" kind="show" identifier="presentResult" id="csA-se-aw8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nt9-a2-8CX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1492,13 +1495,22 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pzj-du-ChO">
-                                                    <rect key="frame" x="28" y="0.0" width="43" height="43"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pzj-du-ChO">
+                                                    <rect key="frame" x="40" y="0.0" width="50" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="70" id="8hG-X9-oJ4"/>
+                                                        <constraint firstAttribute="height" constant="70" id="NPT-dZ-vZZ"/>
+                                                    </constraints>
                                                 </imageView>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Pzj-du-ChO" firstAttribute="centerX" secondItem="W9k-7A-Z3A" secondAttribute="centerX" id="NAM-tC-eyb"/>
+                                                <constraint firstAttribute="trailing" secondItem="Pzj-du-ChO" secondAttribute="trailing" constant="300" id="Qlb-PO-mEh"/>
+                                                <constraint firstItem="Pzj-du-ChO" firstAttribute="leading" secondItem="W9k-7A-Z3A" secondAttribute="leading" constant="40" id="ieG-re-l1e"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="itemImage" destination="Pzj-du-ChO" id="ZzT-hP-DgD"/>
                                             <outlet property="itemPrice" destination="I2a-BS-SaY" id="O4W-mF-W9w"/>
                                             <outlet property="itemTitle" destination="KUk-JY-Xem" id="9Ee-Dn-1BR"/>
                                         </connections>
@@ -1539,6 +1551,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1aF-fp-is9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1637" y="896"/>
+        </scene>
+        <!--Search Result View Controller-->
+        <scene sceneID="dk4-sM-A4T">
+            <objects>
+                <viewController storyboardIdentifier="SearchResultViewController" id="TYM-rg-Vfl" customClass="SearchResultViewController" customModule="reclothes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XOy-CZ-RoU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="pjz-zM-lOZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GHX-aS-0Gk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F3V-iU-OWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-66" y="2453"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

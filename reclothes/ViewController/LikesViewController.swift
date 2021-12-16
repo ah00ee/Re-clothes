@@ -13,7 +13,8 @@ class LikesViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     // 데이터를 저장할 곳
     let contents: [String] = ["파자마", "원피스"]
-    let memo: [String] = ["5000원", "7000원"]
+    let memo: [String] = ["5000원/일", "7000원일"]
+    let images: [String] = ["dress09", "dress05"]
     
     var temp: UIImage?
     
@@ -32,9 +33,7 @@ class LikesViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "likesCell", for: indexPath) as! LikesTableViewCell
         cell.itemTitle.text = self.contents[indexPath.row]
         cell.itemPrice.text = self.memo[indexPath.row]
-        
-        temp = UIImage(named: "image/sampleImage/top1.png")
-        cell.itemImage.image = temp;
+        cell.itemImage.image = UIImage(named: images[indexPath.row])
         
         return cell
     }

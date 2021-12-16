@@ -18,6 +18,7 @@
 		7B7C7D8E27105EA800C875D7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B7C7D8D27105EA800C875D7 /* SceneDelegate.swift */; };
 		7B8552962755F7E40020457D /* LikesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8552952755F7E40020457D /* LikesViewController.swift */; };
 		7B8A8618276A9C24001FFBE7 /* LikesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8A8617276A9C24001FFBE7 /* LikesTableViewCell.swift */; };
+		7B97CB38276BC2DB005A9ED2 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B97CB37276BC2DB005A9ED2 /* SearchResultViewController.swift */; };
 		7B9F5C42272B123300E876BA /* Pods_reclothes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F43EA2D99576D2DBC8A7AD11 /* Pods_reclothes.framework */; };
 		7BF6B7962722BB3A0006D521 /* kakao_signup_medium_narrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */; };
 		BF1DA0B62756B58100AAA5BC /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1DA0B52756B58100AAA5BC /* ReservationViewController.swift */; };
@@ -130,6 +131,7 @@
 		7B8552952755F7E40020457D /* LikesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesViewController.swift; sourceTree = "<group>"; };
 		7B8A8617276A9C24001FFBE7 /* LikesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikesTableViewCell.swift; sourceTree = "<group>"; };
 		7B8D80D8274AA5C1006C8DFC /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7B97CB37276BC2DB005A9ED2 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
 		7BF6B7952722BB3A0006D521 /* kakao_signup_medium_narrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kakao_signup_medium_narrow.png; sourceTree = "<group>"; };
 		A3C4E8637A9DD9A03969C8D7 /* Pods_reclothesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_reclothesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A44F74ED8A1C4481D16DEC91 /* Pods-reclothesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-reclothesTests.debug.xcconfig"; path = "Target Support Files/Pods-reclothesTests/Pods-reclothesTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -430,6 +432,7 @@
 				60CF85E6275B8A0C000C7215 /* SearchViewController.swift */,
 				60DC74AD2704CD95004AD74B /* LoginViewController.swift */,
 				BFB03F78272FD10D00C9F2D0 /* UserViewController.swift */,
+				7B97CB37276BC2DB005A9ED2 /* SearchResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -790,6 +793,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B2F12C32758FA3500C5D6DC /* PostCollectionViewCell.swift in Sources */,
+				7B97CB38276BC2DB005A9ED2 /* SearchResultViewController.swift in Sources */,
 				BFFF007027569855000D6DA6 /* ItemCollectionViewCell.swift in Sources */,
 				BF1DA0B8275723A600AAA5BC /* ItemCollectionViewController.swift in Sources */,
 				BF1DA0BA27574F3C00AAA5BC /* SchedulerViewController.swift in Sources */,

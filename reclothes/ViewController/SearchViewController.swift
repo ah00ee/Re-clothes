@@ -8,14 +8,12 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupSearchController()
     }
     
     func setupSearchController() {
-        // style 1
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "검색해 줘"
         searchController.hidesNavigationBarDuringPresentation = false
@@ -23,24 +21,36 @@ class SearchViewController: UIViewController {
         self.navigationItem.searchController = searchController
         self.navigationItem.title = "Search"
         self.navigationItem.hidesSearchBarWhenScrolling = false
-        
-        // style 2
-        //        let searchBar = UISearchBar(frame: CGRect(x: 0, y: 0, width: view.frame.width - 80, height: 0))
-        //        self.navigationItem.leftBarButtonItem = UIBarButtonItem(customView: searchBar)
-        //
-        //        self.navigationItem.title = "Search"
-        //        self.navigationItem.hidesSearchBarWhenScrolling = false
-        
+        /*
+        let storyboard: UIStoryboard? = UIStoryboard(name: "Main", bundle: nil)
+        guard let resultVC = storyboard?.instantiateViewController(identifier: "SearchResultViewController")else{
+            return
+        }
+        resultVC.modalPresentationStyle = UIModalPresentationStyle.fullScreen
+        */
         let search = UIBarButtonItem(systemItem: .search, primaryAction: UIAction(handler: { _ in
             // 검색 내용 저장
             guard let text = searchController.searchBar.text else {
                 return
             }
-            print(text)
             
             // To do: 검색 결과 페이지로 연결
-            
+            self.performSegue(withIdentifier: "presentResult", sender: UIBarButtonItem.self)
+            //self.present(resultVC, animated: true, completion: nil)
         }))
+        
         self.navigationItem.rightBarButtonItem = search
+    }
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "presentResult"{
+            if let vc = segue.destination as? SearchResultViewController {
+                vc.receiveWord("")
+            }
+        }
     }
 }
