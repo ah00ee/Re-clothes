@@ -19,6 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var sharerImg: UIImageView!
     @IBOutlet weak var reserveBtn: UIButton!
+    @IBOutlet weak var likeBtn: UIButton!
     
     var tmpImage: UIImage!
     var tmpTitle: String = ""
@@ -41,6 +42,21 @@ class DetailViewController: UIViewController {
         itemImage.image = tmpImage
         itemTitle.text = tmpTitle
         itemPrice.text = tmpPrice
+        
+        // should be changed as saved data(Like or Not)
+        likeBtn.setImage(UIImage(systemName: "heart"), for: .normal)
+    }
+    
+    // 찜 선택 및 해제 기능
+    @IBAction func likeOrNot(_ sender: UIButton) {
+        if sender.currentImage == UIImage(systemName: "heart"){
+            if let image = UIImage(systemName: "heart.fill"){
+                sender.setImage(image, for: .normal)
+            }
+        }
+        else if sender.currentImage == UIImage(systemName: "heart.fill"){
+            sender.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
     }
    
     // Item 불러오기(user)

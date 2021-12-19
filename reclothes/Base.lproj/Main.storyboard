@@ -237,14 +237,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="schedulerTableViewCell" id="AKj-PA-aiV" customClass="SchedulerTableViewCell" customModule="reclothes" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.666666030883789" width="370" height="43.333332061767578"/>
+                                        <rect key="frame" x="0.0" y="44.666666030883789" width="370" height="43.666667938232422"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="AKj-PA-aiV" id="av4-Sv-o4Q">
-                                            <rect key="frame" x="0.0" y="0.0" width="370" height="43.333332061767578"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A8C-MM-Geh">
-                                                    <rect key="frame" x="40" y="10.999999999999998" width="310" height="21.333333333333329"/>
+                                                    <rect key="frame" x="40" y="11.000000000000002" width="310" height="21.666666666666671"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -501,6 +501,9 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                <connections>
+                                    <action selector="likeOrNot:" destination="I8Y-Ov-QG3" eventType="touchUpInside" id="Wpv-gV-GXu"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="CS0-Mv-o21"/>
@@ -534,6 +537,7 @@
                         <outlet property="itemImage" destination="mL5-4S-IUC" id="NQU-pl-XZB"/>
                         <outlet property="itemPrice" destination="Amv-5d-U69" id="8dr-Oi-KCp"/>
                         <outlet property="itemTitle" destination="GCz-4B-G8M" id="VLb-NA-D4N"/>
+                        <outlet property="likeBtn" destination="6RQ-cE-6F4" id="bwT-Lv-4QR"/>
                         <outlet property="profileView" destination="w53-9G-SfP" id="23M-mR-h52"/>
                         <outlet property="reserveBtn" destination="PfP-rJ-u8F" id="q6m-SD-1Ts"/>
                         <outlet property="sharerImg" destination="3l5-N0-hap" id="Keu-rG-tXL"/>
