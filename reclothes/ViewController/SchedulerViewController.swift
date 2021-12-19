@@ -96,6 +96,8 @@ extension SchedulerViewController: UITableViewDelegate, UITableViewDataSource{
         return schedules.count
     }
     
+    
+    // should be changed (error: same itemTitle for different item)
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = scheduleList.dequeueReusableCell(withIdentifier: "schedulerTableViewCell", for:indexPath) as! SchedulerTableViewCell
 

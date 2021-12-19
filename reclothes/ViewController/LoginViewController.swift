@@ -70,13 +70,14 @@ class LoginViewController: UIViewController {
                 Auth.auth().createUser(withEmail: (user?.kakaoAccount?.email)!, password: "\(String(describing: user?.id))") { fuser, error in
                     if let error = error {
                         print(error)
-                        print("이미 가입된 회원입니다!")
+                        // 가입된 회원(로그인)
                         Auth.auth().signIn(withEmail: email, password: "\(String(describing: user?.id))", completion: nil)
                         present(mainVC, animated: true, completion: nil)
                     } else {
+                        // 새로운 회원(회원가입)
                         ref = Database.database().reference().child("user")
                         self.ref.child("\(String(describing: user?.id))").setValue(["nickname": nickname, "email": email, "gender": gender, "bday": bday, "itemID": itemID, "reservationID": reservationID])
-                        print("회원가입이 완료되었습니다.")
+
                         present(mainVC, animated: true, completion: nil)
                         mainVC.present(popupVC, animated: true, completion: nil)
                     }

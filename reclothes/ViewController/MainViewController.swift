@@ -12,7 +12,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     @IBOutlet weak var mainTableView: UITableView!
     var tempHashTagLabel = ["# 오늘 핫한 신상", "# 주목해볼만한 아이템", "# 가을 어쩌구 저쩌구"]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -22,6 +21,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     // item info 반환
+    // should be fixed: show detailVC from mainVC(data retrieving)
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailViewController else { return }
     }
@@ -35,14 +35,12 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         // temp text arr
         cell.labelWithHashtag.text = tempHashTagLabel[indexPath.row]
-        // which row
         cell.mainCollectionView.tag = indexPath.row
         
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 280.0;//Choose your custom row height
+        return 280.0; // Choose your custom row height
     }
-
 }
