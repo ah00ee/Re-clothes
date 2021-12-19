@@ -38,7 +38,7 @@ class ItemCollectionViewController: UIViewController, UICollectionViewDelegate, 
         cell.itemImage.image = UIImage(named: imgName[indexPath.row])
         cell.itemTitle.text = tmpItemName[indexPath.row]
         cell.itemPrice.text = tmpItemPrice[indexPath.row]
-        cell.itemPrice.text! += "(1일기준)"
+        cell.itemPrice.text! += "/일"
         
         return cell
     }

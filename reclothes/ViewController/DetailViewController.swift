@@ -67,14 +67,14 @@ class DetailViewController: UIViewController {
                 else{
                     let data = NSData(contentsOf: url!)
                     let image = UIImage(data: data! as Data)
-                    self.tmpImage = image
+                    self.itemImage.image = image
                 }
             }
             let title = value["title"] as! String
             let price = value["price"] as! Int
             
-            self.tmpTitle = title
-            self.tmpPrice = String(price) + "원/일"
+            self.itemTitle.text = title
+            self.itemPrice.text = String(price) + "원/일"
         });
     }
     

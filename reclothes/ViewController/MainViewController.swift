@@ -34,7 +34,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         let cell = tableView.dequeueReusableCell(withIdentifier: "mainTableViewCell", for: indexPath) as! MainTableViewCell
         
         // temp text arr
-        cell.labelWithHashtag.text = tempHashTagLabel[indexPath.row]    
+        cell.labelWithHashtag.text = tempHashTagLabel[indexPath.row]
+        // which row
+        cell.mainCollectionView.tag = indexPath.row
+        
         return cell
     }
     
