@@ -19,6 +19,10 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var sharerImg: UIImageView!
     @IBOutlet weak var reserveBtn: UIButton!
+    
+    var tmpImage: UIImage!
+    var tmpTitle: String = ""
+    var tmpPrice: String = ""
 
     var ref: DatabaseReference!
     var storage: StorageReference!
@@ -33,9 +37,13 @@ class DetailViewController: UIViewController {
         profileView.layer.borderWidth = 0.7
         
         reserveBtn.layer.cornerRadius = 20
+        
+        itemImage.image = tmpImage
+        itemTitle.text = tmpTitle
+        itemPrice.text = tmpPrice
     }
    
-    // Item 불러오기
+    // Item 불러오기(user)
     func receiveItem(_ item: String){
         receivedItem = item
         var imgPath: String = "gs://re-clothes.appspot.com/"
@@ -59,26 +67,22 @@ class DetailViewController: UIViewController {
                 else{
                     let data = NSData(contentsOf: url!)
                     let image = UIImage(data: data! as Data)
-                    self.itemImage.image = image
+                    self.tmpImage = image
                 }
             }
             let title = value["title"] as! String
             let price = value["price"] as! Int
             
-            self.itemTitle.text = title
-            self.itemPrice.text = String(price) + "원/일"
+            self.tmpTitle = title
+            self.tmpPrice = String(price) + "원/일"
         });
     }
     
+    // 검색 결과 셀에서 데이터 불러오기
     func receiveItemData(_ img: String, _ title: String, _ price: String){
-        /*
-         
-         Error ***  itemImage 가 Nil
-         
-        self.itemImage.image = UIImage(named: img)
-        self.itemTitle.text = title
-        self.itemPrice.text = price
-         */
+        tmpImage = UIImage(named: img)
+        tmpTitle = title
+        tmpPrice = price
     }
 
     // TODO: description 추가
